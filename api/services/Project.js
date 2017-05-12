@@ -36,7 +36,8 @@ var schema = new Schema({
     //   default: ""
     // },
     images: [{
-        image: String
+        image: String,
+        order: Number
     }],
     order: Number,
     status: {

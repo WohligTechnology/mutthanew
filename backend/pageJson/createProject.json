@@ -68,16 +68,6 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     }, {
-        "name": "Project Images",
-        "type": "image",
-        "tableRef": "images",
-        "option": "multiple",
-        "placeholder": "Enter Project Images",
-        "id": "input4",
-        "validation": ["required", "trim", "unique"],
-        "url": "",
-        "size": "374px X 374px"
-    }, {
         "name": "Order",
         "type": "number",
         "tableRef": "order",
@@ -96,6 +86,36 @@
         "dropDownType": "single",
         "onView": true,
         "dropDown": ["Enabled", "Disabled"]
+    }, {
+        "name": "Project Images",
+        "type": "box",
+        "tableRef": "images",
+        "placeholder": "Enter Project Images",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "fields": [{
+            "name": "Image",
+            "type": "image",
+            "tableRef": "image",
+            "tableValue": "image",
+            "size": "374px X 374px",
+            "placeholder": "Enter image",
+            "id": "image",
+            "option": "single",
+            "validation": ["required", "trim", ""],
+            "onView": true,
+            "url": ""
+        }, {
+            "name": "Order",
+            "type": "text",
+            "tableRef": "order",
+            "placeholder": "Enter Order",
+            "id": "order",
+            "validation": ["required", "trim", ""],
+            "onView": true,
+            "url": ""
+        }]
     }],
     "action": [{
         "name": "submit",
