@@ -13,10 +13,6 @@
         "isSort": "",
         "tableRef": "email"
     }, {
-        "name": "Project",
-        "isSort": "",
-        "tableRef": "project.name"
-    }, {
         "name": "Status",
         "isSort": "",
         "tableRef": "status"

@@ -3,7 +3,7 @@ var controller = {
     getOne: function (req, res) {
 
         if (req.body) {
-            GetInTouchProject.getOne(req.body, res.callback);
+            GetInTouch.getOne(req.body, res.callback);
         } else {
             res.json({
                 value: false,
@@ -17,7 +17,7 @@ var controller = {
             Global.response(err, data, res);
         }
         if (req.body) {
-            GetInTouchProject.getAll(req.body, res.callback);
+            GetInTouch.getAll(req.body, res.callback);
         } else {
             res.json({
                 value: false,
@@ -29,7 +29,7 @@ var controller = {
     findLimited: function (req, res) {
         if (req.body) {
             if (req.body.pagenumber && req.body.pagenumber !== "" && req.body.pagesize && req.body.pagesize !== "") {
-                GetInTouchProject.findLimited(req.body, res.callback);
+                GetInTouch.findLimited(req.body, res.callback);
             } else {
                 res.json({
                     value: false,

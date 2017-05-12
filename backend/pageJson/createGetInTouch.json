@@ -25,7 +25,7 @@
         "tableRef": "project",
         "id": "project",
         "validation": ["", "trim", ""],
-        "dropDownField": "name",
+        "dropDownField": "projectname",
         "dropDownType": "single",
         "onView": true,
         "url": "Project/search"

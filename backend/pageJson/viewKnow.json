@@ -9,15 +9,13 @@
         "isSort": "",
         "tableRef": "title"
     }, {
-        "name": "Banner",
+        "name": "Mission",
         "isSort": "",
-        "type": "image",
-        "tableRef": "banner"
+        "tableRef": "mission"
     }, {
-        "name": "Status",
+        "name": "Philosophy",
         "isSort": "",
-        "type": "text",
-        "tableRef": "status"
+        "tableRef": "philosophy"
     }],
     "action": [{
         "name": "edit",
