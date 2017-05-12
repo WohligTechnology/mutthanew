@@ -1,0 +1,80 @@
+{
+    "title": "Edit Get-In-Touch",
+    "name": "GetInTouch",
+    "jsonPage": "viewGetInTouch",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "id": "name",
+        "validation": ["required", "trim", ""],
+        "url": ""
+    }, {
+        "name": "Email",
+        "type": "text",
+        "tableRef": "email",
+        "id": "email",
+        "validation": ["required", "trim", ""],
+        "url": ""
+    }, {
+        "name": "Project",
+        "type": "tags",
+        "tableRef": "project",
+        "id": "project",
+        "validation": ["", "trim", ""],
+        "dropDownField": "name",
+        "dropDownType": "single",
+        "onView": true,
+        "url": "Project/search"
+    }, {
+        "name": "Enquiry",
+        "type": "textarea",
+        "tableRef": "enquiry",
+        "id": "enquiry",
+        "validation": ["required", "trim", ""],
+        "url": ""
+    }, {
+        "name": "Status",
+        "type": "tags",
+        "tableRef": "status",
+        "placeholder": "Select Status",
+        "id": "status",
+        "validation": ["required", "trim"],
+        "url": "",
+        "dropDownField": "",
+        "dropDownType": "single",
+        "onView": true,
+        "dropDown": ["Enabled", "Disabled"]
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitGetInTouch",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewGetInTouch"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewGetInTouch"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "GetInTouch/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "GetInTouch/getOne",
+        "params": "_id"
+    }
+
+}

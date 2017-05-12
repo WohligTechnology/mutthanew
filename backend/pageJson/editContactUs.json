@@ -1,0 +1,77 @@
+{
+    "title": "Edit ContactUs",
+    "name": "ContactUs",
+    "jsonPage": "viewContactUs",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "id": "name",
+        "validation": ["required", "trim", ""],
+        "url": ""
+    }, {
+        "name": "Email",
+        "type": "text",
+        "tableRef": "email",
+        "id": "email",
+        "validation": ["required", "trim", ""],
+        "url": ""
+    }, {
+        "name": "Subject",
+        "type": "text",
+        "tableRef": "subject",
+        "id": "subject",
+        "validation": ["", "trim", ""],
+        "url": ""
+    }, {
+        "name": "Enquiry",
+        "type": "textarea",
+        "tableRef": "enquiry",
+        "id": "enquiry",
+        "validation": ["required", "trim", ""],
+        "url": ""
+    }, {
+        "name": "Status",
+        "type": "tags",
+        "tableRef": "status",
+        "placeholder": "Select Status",
+        "id": "status",
+        "validation": ["required", "trim"],
+        "url": "",
+        "dropDownField": "",
+        "dropDownType": "single",
+        "onView": true,
+        "dropDown": ["Enabled", "Disabled"]
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitContactUs",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewContactUs"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewContactUs"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "ContactUs/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "ContactUs/getOne",
+        "params": "_id"
+    }
+
+}
