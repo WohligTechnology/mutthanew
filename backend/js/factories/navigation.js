@@ -34,7 +34,7 @@ myApp.factory('NavigationService', function ($http) {
     }, {
         name: "Projects",
         classis: "active",
-        sref: "#!/page/viewProjects//",
+        sref: "#!/page/viewProject//",
         icon: "phone"
     }, {
         name: "Subscribers",
