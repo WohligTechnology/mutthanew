@@ -1,0 +1,54 @@
+{
+    "title": "Create Clients",
+    "name": "Clients",
+    "jsonPage": "viewClients",
+    "desciption": "",
+    "pageType": "create",
+    "urlFields": ["Clients"],
+    "fields": [{
+        "name": "Title",
+        "type": "text",
+        "tableRef": "title",
+        "id": "title",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Banner",
+        "type": "image",
+        "tableRef": "banner",
+        "id": "banner",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "view": true,
+        "size": "220px X 65px"
+    }, {
+        "name": "Description",
+        "type": "textarea",
+        "tableRef": "description",
+        "id": "desc",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitClients",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewClients"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewClients"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Clients/save"
+    }
+}

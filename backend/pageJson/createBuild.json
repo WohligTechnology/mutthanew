@@ -1,0 +1,54 @@
+{
+    "title": "Create Build",
+    "name": "Build",
+    "jsonPage": "viewBuild",
+    "desciption": "",
+    "pageType": "create",
+    "urlFields": ["Build"],
+    "fields": [{
+        "name": "Title",
+        "type": "text",
+        "tableRef": "title",
+        "id": "title",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Banner",
+        "type": "image",
+        "tableRef": "banner",
+        "id": "banner",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "view": true,
+        "size": "220px X 65px"
+    }, {
+        "name": "Description",
+        "type": "textarea",
+        "tableRef": "description",
+        "id": "desc",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitBuild",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewBuild"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewBuild"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Build/save"
+    }
+}

@@ -1,0 +1,128 @@
+{
+    "title": "Create Know",
+    "name": "Know",
+    "jsonPage": "viewKnow",
+    "desciption": "",
+    "pageType": "create",
+    "urlFields": ["Know"],
+    "fields": [{
+        "name": "Title",
+        "type": "text",
+        "tableRef": "title",
+        "id": "title",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Banner",
+        "type": "image",
+        "tableRef": "banner",
+        "id": "banner",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "view": true,
+        "size": "220px X 65px"
+    }, {
+        "name": "Overview",
+        "type": "textarea",
+        "tableRef": "overview",
+        "id": "overview",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Mission",
+        "type": "text",
+        "tableRef": "mission",
+        "id": "mission",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Philosophy",
+        "type": "text",
+        "tableRef": "philosophy",
+        "id": "philosophy",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Management",
+        "type": "box",
+        "tableRef": "management",
+        "validation": [
+            "required",
+            "trim",
+            ""
+        ],
+        "fields": [{
+            "name": "Image",
+            "type": "image",
+            "tableRef": "image",
+            "tableValue": "image",
+            "placeholder": "Enter image",
+            "id": "image",
+            "option": "single",
+            "validation": ["required", "trim", ""],
+            "onView": true,
+            "url": ""
+        }, {
+            "name": "Order",
+            "type": "text",
+            "tableRef": "order",
+            "placeholder": "Enter Order",
+            "id": "order",
+            "validation": ["required", "trim", ""],
+            "onView": true,
+            "url": ""
+        }, {
+            "name": "Name",
+            "type": "text",
+            "tableRef": "name",
+            "placeholder": "Enter person's name",
+            "id": "name",
+            "validation": ["required", "trim", ""],
+            "onView": true,
+            "url": ""
+        }, {
+            "name": "Description",
+            "type": "textarea",
+            "tableRef": "description",
+            "placeholder": "Enter description",
+            "id": "desc",
+            "validation": ["required", "trim", ""],
+            "onView": true,
+            "url": ""
+        }, {
+            "name": "Status",
+            "type": "tags",
+            "tableRef": "status",
+            "placeholder": "Select Status",
+            "id": "status",
+            "validation": ["required", "trim"],
+            "url": "",
+            "dropDownField": "",
+            "dropDownType": "single",
+            "onView": true,
+            "dropDown": ["Enabled", "Disabled"]
+        }]
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitKnow",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewKnow"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewKnow"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Know/save"
+    }
+}

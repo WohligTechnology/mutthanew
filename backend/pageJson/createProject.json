@@ -1,0 +1,122 @@
+{
+    "title": "Create Project",
+    "name": "Project",
+    "jsonPage": "viewProject",
+    "desciption": "",
+    "pageType": "create",
+    "urlFields": ["Project"],
+    "fields": [{
+        "name": "Project Name",
+        "type": "text",
+        "tableRef": "projectname",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Thumb Image",
+        "type": "image",
+        "option": "single",
+        "tableRef": "thumbimage",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "size": "421px X 232px"
+    }, {
+        "name": "Banner Image",
+        "type": "image",
+        "option": "single",
+        "tableRef": "banner",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "size": "1920px X 1077px"
+    }, {
+        "name": "Banner Logo",
+        "type": "image",
+        "option": "single",
+        "tableRef": "bannerlogo",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "size": "300px X 286px"
+    }, {
+        "name": "Project Desciption",
+        "type": "textarea",
+        "tableRef": "description",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Design and Features",
+        "type": "textarea",
+        "tableRef": "designFeature",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Technical Specifications",
+        "type": "textarea",
+        "tableRef": "specification",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Key Distances",
+        "type": "textarea",
+        "tableRef": "keyDistance",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Project Images",
+        "type": "image",
+        "tableRef": "images",
+        "option": "multiple",
+        "placeholder": "Enter Project Images",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "size": "374px X 374px"
+    }, {
+        "name": "Order",
+        "type": "number",
+        "tableRef": "order",
+        "id": "order",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Status",
+        "type": "tags",
+        "tableRef": "status",
+        "placeholder": "Select Status",
+        "id": "status",
+        "validation": ["required", "trim"],
+        "url": "",
+        "dropDownField": "",
+        "dropDownType": "single",
+        "onView": true,
+        "dropDown": ["Enabled", "Disabled"]
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitProject",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewProject"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewProject"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Project/save"
+    }
+}
