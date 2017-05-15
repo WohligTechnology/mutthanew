@@ -81,6 +81,15 @@
             "onView": true,
             "url": ""
         }, {
+            "name": "Designation",
+            "type": "text",
+            "tableRef": "designation",
+            "placeholder": "Enter person's designation",
+            "id": "desg",
+            "validation": ["required", "trim", ""],
+            "onView": true,
+            "url": ""
+        }, {
             "name": "Description",
             "type": "textarea",
             "tableRef": "description",

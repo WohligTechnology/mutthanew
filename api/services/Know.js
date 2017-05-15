@@ -16,6 +16,7 @@ var schema = new Schema({
         image: String,
         description: String,
         order: Number,
+        designation: String,
         status: String
     }],
     mission: String,

@@ -1,0 +1,624 @@
+$screen-xs: 480px !default;
+$screen-sm: 768px !default;
+$screen-md: 992px !default;
+$screen-lg: 1200px !default;
+@media (max-width: $screen-lg) {
+    .overview-box {
+        font-size: 13px;
+        width: 75%;
+    }
+
+    .inblo ul li {
+        display: inline-block;
+        width: 19.657543%;
+    }
+
+    .head-font .head-shantilal {
+        font-size: 30px;
+    }
+  .nat.font25.to{
+    padding-left: 120px;
+    font-size: 40px;
+  }
+  .mob-set{
+    margin-top: -28px;
+    margin-left: -12px;
+}
+.that.pdnone.mg-set.mob-2{
+  margin-top: -35px;
+}
+.lh50.mgt.mob-3{
+  line-height: 50%;
+margin-left: 140px;
+margin-top: 3px;
+}
+.pl75.pl-120.mob-1{
+  margin-top: 0;
+}
+.no-bod{
+  border-right: transparent;
+
+}
+    // .logo {
+    //     padding: 131px 25px;
+    // }
+}
+@media (max-width: $screen-xs-max) {
+    .back-banner,.back-banners,.know-banners,.client-banners,.media-banners,.career-banners{
+  background-size: cover;
+  background-position: center center;
+}
+
+.pad-box {
+    padding: 50px 0 0 20px;
+}
+.know-bg{
+.mt60{
+    margin: 0;
+}
+
+}
+
+.vissions-info,.vissions-inform {
+    padding: 0px 30px 0px 30px;
+    h3{
+        font-size: 20px;
+        &:before{
+                left: 5px;
+        }
+    }
+}
+
+.vissions-inform { padding: 0px 30px 0 30px; }
+
+    // .logo {
+    //     padding: 196px 25px;
+    // }
+    .brd-right {
+        border-right: 0 solid #949697;
+        border-bottom: 1px solid #949697;
+    }
+    .img-give {
+        padding: 20px 0;
+    }
+    .img-give img {
+        height: 80px;
+    }
+    .sht-pic{
+      top: -30px;
+    }
+  .head-mob{
+    margin-top: -40px;
+  }
+  .mb-xs{
+    margin-top: 80px;
+  }
+  .mission-desc{
+    padding: 20px 20px;
+  }
+    .mission-desc,
+    .vision .vision-desc {
+        width: 320px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 1024px) and (orientation:landscape) {
+    .logo {
+        padding: 141px 25px;
+    }
+    .vision {
+        margin: 22px -127px;
+        .philo {
+            padding: 0 101px 0 0;
+        }
+    }
+
+    .inblo ul li {
+    display: inline-block;
+    width: 15.95859%;
+}
+}
+@media (max-width: $screen-sm-max) {
+  .navbar-brand {
+    margin: -5px 0 0;
+
+}
+    .vision {
+        margin: 22px -10px;
+        .vision-desc {
+            padding-left: 75px;
+        }
+        .philo {
+            padding: 0 31px 0 0;
+        }
+    }
+    .logo {
+        padding: 196px 25px;
+    }
+    .mission-desc {
+        padding: 30px 13px;
+    }
+    .inblo ul li {
+        display: block;
+        margin: 0 auto;
+        width: 33%;
+    }
+    .bkp-img {
+        background: none;
+        background-position-x: 0;
+    }
+    .footer ul {
+        padding: 0;
+        li {
+            padding: 0 6px;
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+    // .vision-desc {
+    //     padding: 0px 20px 0px 20px;
+    // }
+    .display-block-mobile {
+        display: block;
+    }
+    .text-c {
+        text-align: left;
+    }
+    .overview-box {
+        position: inherit;
+        top: inherit;
+        left: inherit;
+        transform: inherit;
+        padding: 20px;
+        h1 {
+            text-align: center;
+            font-size: 30px;
+        }
+        font-size: 14px;
+        width: 100%;
+    }
+    .font-didot{
+      font-size: 30px;
+    }
+    .head-font {
+        text-align: center;
+        width: 100%;
+        h1 {
+            font-size: 50px;
+        }
+    }
+    .mt60 {
+        margin-top: 0;
+    }
+    .font25 {
+        font-size: 16px;
+    }
+    .project-logo {
+        height: 172px;
+        img {
+            zoom: 0.6;
+        }
+    }
+    .pmt50 {
+        padding-top: 50px;
+    }
+    .border-top {
+        border-top: 1px solid grey;
+    }
+    .border-right {
+        border-right: 0 solid grey;
+    }
+    .project-box {
+        padding: 10px 0;
+    }
+    .mpb22 {
+        padding-bottom: 23px;
+    }
+    .mobile-hr {
+        border-top: 2px solid grey;
+        width: 100%;
+    }
+    .margin60 {
+        margin-top: 60px;
+    }
+    .head-font h1 {
+        padding-top: 30px;
+    }
+    .news-name {
+        padding-bottom: 20px;
+    }
+    .font110px {
+        font-size: 40px;
+    }
+    span.enhance {
+        font-size: 48px;
+    }
+    .spaces {
+        font-size: 15px;
+    }
+    .quality,
+    .that {
+        font-size: 78px;
+    }
+    span.estate {
+        font-size: 16px;
+    }
+    .navbar-brand {
+        padding: 0 15px 0 30px;
+    }
+    .hides {
+        opacity: 1 !important;
+    }
+}
+@media (max-width:768px) {
+    .mission-desc {
+        padding: 30px 50px;
+        .spaces {
+            padding: 8px 22px 10px;
+        }
+    }
+    .logo.position-center{
+        top: 50%;
+    }
+    .footer .squeeze p {
+    // width: 133px;
+    font-size: 10px;
+}
+}
+@media (max-width: 480px) {
+
+ .pad-bot{ padding-bottom: 30px; }
+
+.rows { @include display(block); }
+
+.styles-mob{ padding: 40px 0 0 !important; }
+
+.vissions-inform h3:before,.vissions-info h3:before{
+    display: none;
+}
+
+.cols1 .list{
+  float: none!important;
+}
+.build-banner1,.build-banner2,.build-banner3,.build-banner9,.build-banner10{
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+.mobile-banner,.mobile-bannerse,.mobile-banner10{
+    background-size: cover !important;
+    background-position: left center !important;
+}
+
+  .media-slider .img-m {
+   height: auto;
+
+}
+  .flexslider:hover .flex-direction-nav .flex-next {
+      opacity: 0.7;
+      right: 95px ;
+  }
+  .flex-direction-nav a {
+      width: 57px;
+      height: 100px;
+      opacity: 1 !important;
+  }
+  .flex-direction-nav .flex-prev {
+      left:inherit;
+      opacity: 1;
+      right:175px;
+  }
+  .flexslider:hover .flex-direction-nav .flex-prev {
+      opacity: 0.7;
+      right: 175px;
+      left:inherit;
+  }
+  .flex-direction-nav .flex-next {
+      right:95px !important;
+      opacity: 1;
+  }
+  .media-slider .flex-direction-nav a {
+      bottom: -27px;
+      top: inherit;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  .media-slider {
+     position: inherit;
+     top:inherit;
+    transform: inherit;
+    margin-top: 15px;
+}
+
+  .navbar-brand {
+    margin: -5px 0 0;
+
+}
+    .vision {
+        border: 0;
+        height: 0;
+        margin: 0 -10px 170px;
+        .vision-desc {
+            padding-left: 32px;
+        }
+    }
+    .iph{
+    margin: 0 auto;
+    margin-left: -60px;
+    width: 400px;
+}
+.pt100.pb100.iph-1{
+      padding-bottom: 100px;
+}
+
+    .mission-desc,
+    .vision .vision-desc {
+        width: 300px;
+        overflow-x: hidden;
+        margin: 0 auto;
+        height: 300px;
+    }
+    .mission-desc {
+        padding: 30px 20px;
+    }
+    .logo-clients {
+        img {
+            height: 56px;
+        }
+    }
+    .font15 {
+        display: block;
+    }
+    .news-name {
+        padding-bottom: 20px;
+        display: inline-block;
+    }
+    .img-box {
+        height: 180px;
+        border: 1px solid #ccc;
+    }
+    .font13 {
+        float: left;
+    }
+    .back-box {
+        padding: 13px 28px;
+    }
+    .project-desc {
+        padding: 15px;
+    }
+    .f45 {
+        font-size: 25px;
+    }
+    .project-main {
+        img {
+            zoom: 0.6;
+        }
+    }
+    .pb50 {
+        padding-bottom: 30px;
+    }
+    .font25 {
+        font-size: 14px;
+    }
+    .client-logo {
+        height: 100px;
+    }
+    .footer ul {
+        padding: 0;
+        li {
+            padding: 0 4px;
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+    .bkp-img {
+        background: none;
+        background-position-x: 0;
+    }
+    .head-font h1,
+    .up-side h1 {
+        padding-top: 10px;
+        color: #fff;
+    }
+    .padding-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .navbar-nav {
+        text-align: center;
+    }
+    .float-right {
+        float: none;
+        text-align: center;
+    }
+    .social-icon {
+        ul {
+            padding: 0;
+        }
+    }
+    .display-block-mobile {
+        display: block;
+    }
+    .overview-box {
+        position: inherit;
+        top: inherit;
+        left: inherit;
+        transform: inherit;
+        padding: 20px;
+        h1 {
+            text-align: center;
+        }
+    }
+    .nav-header {
+        margin-top: 20px;
+    }
+    .mt60 {
+        margin-top: 30px;
+    }
+    .mtm30 {
+        margin-top: 30px;
+    }
+    .mmb30 {
+        margin-bottom: 30px;
+    }
+    .pt100 {
+        padding-top: 50px;
+    }
+    .pt50 {
+        padding-top: 30px;
+    }
+    .pb100 {
+        padding-bottom: 50px;
+    }
+    .mmt100 {
+        margin-top: 100px;
+    }
+    .head-font {
+        text-align: center;
+        width: 100%;
+        h1 {
+            font-size: 40px;
+        }
+    }
+    .padding0m {
+        padding: 0;
+    }
+    .project-info ul li {
+        line-height: 180%;
+        font-size: 13px;
+    }
+    .f25m {
+        font-size: 25px;
+    }
+    .submit {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .f60 {
+        font-size: 40px;
+    }
+    .project-logo {
+        height: 152px;
+        img {
+            zoom: 0.5;
+        }
+    }
+    .pmt50 {
+        padding-top: 50px;
+    }
+    .border-top {
+        border-top: 1px solid grey;
+    }
+    .border-right {
+        border-right: 0 solid grey;
+    }
+    .project-box {
+        padding: 0;
+    }
+    .mpb22 {
+        padding: 0 0 23px;
+    }
+    .mobile-hr {
+        border-top: 2px solid grey;
+        width: 100%;
+    }
+    .font50 {
+        font-size: 50px !important;
+    }
+    .font110px {
+        font-size: 40px;
+    }
+    span.enhance {
+        font-size: 48px;
+    }
+    .spaces {
+        font-size: 15px;
+    }
+    .quality,
+    .that {
+        font-size: 78px;
+    }
+    span.estate {
+        font-size: 16px;
+    }
+    .text-c {
+        text-align: left;
+    }
+    .hides {
+        opacity: 1 !important;
+    }
+    .contact {
+        h3 {
+            font-size: 20px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+    .navbar-brand {
+        padding: 0 15px 0 30px;
+    }
+    .mob{
+            height: 115vh;
+    }
+    .change-pad .overview-box {
+    padding: 50px 0 0 50px;
+}
+.change-pad .shantilal-cont {
+    width: 88%;
+}
+.logos{
+    margin-left: -60px;
+}
+.back-banners ,.back-bannerss{
+    background: url(../img/build-banner2.jpg) no-repeat;
+    background-size: cover;
+    min-height: 667px;
+}
+.back-bannerss{
+     background: url(../img/contact.jpg) no-repeat;
+     background-position: center;
+    background-size: cover;
+}
+
+.height-auto{
+    min-height: 500px !important;
+    padding: 50px 0 0 0px;
+}
+
+.foot-bottom p{
+    font-size: 11px;
+}
+
+.mobiles{
+min-height: 120vh !important;
+
+}
+.logo.position-center {
+  
+    top: 50%;
+   
+}
+.vissions-info h3, .vissions-inform h3{
+    font-size: 18px;
+}
+.vision-title{
+    h2{
+  font-size: 24px;
+    }
+  
+}
+.logo-client{
+        height: 50px;
+    width: 100px;
+    img{
+        width: 100%;
+    }
+}
+// .project-banners{
+//   background-image: url("../img/mobile/symphony.jpg") !important;
+// }
+
+}
