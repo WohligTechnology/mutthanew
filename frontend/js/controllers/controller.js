@@ -38,13 +38,19 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
 
 
     })
-    .controller('BuildCtrl', function ($scope, $state, TemplateService, NavigationService, $timeout, $uibModal) {
+    .controller('BuildCtrl', function ($scope, $state, $timeout, $uibModal, TemplateService, NavigationService, ContentService) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("build");
         $scope.menutitle = NavigationService.makeactive("Build");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         $scope.validEmail = /^[a-z]+[@][a-z]+[.]+[a-z]*$/;
+
+        ContentService.getBuild(function (data) {
+            console.log("Build data: ", data);
+            $scope.buildData = data.data.data.build[0];
+            $scope.projects = data.data.data.project;
+        });
 
         $scope.contactsubmit = function (formData) {
             console.log("hi contact");

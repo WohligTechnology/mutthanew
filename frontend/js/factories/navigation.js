@@ -1,3 +1,6 @@
+var imgurl = adminurl + "upload/";
+
+var imgpath = imgurl + "readFile";
 myApp.factory('NavigationService', function () {
     var navigation = [
         //     {
