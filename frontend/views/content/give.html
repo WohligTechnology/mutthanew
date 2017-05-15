@@ -1,0 +1,125 @@
+<section class="give">
+    <div class="banner build-banner9 hidden-xs hidden-sm" auto-height>
+        <div class="head-font text-center">
+            <h1>GIVE</h1>
+        </div>
+    </div>
+    <div class="banner mobile-bannerse hidden-lg hidden-md" auto-height>
+        <div class="head-font">
+            <h1 class="font50">GIVE</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <div class="desc mt60 mb60 margin60">
+                    <P class="font-weight300">Muttha Group believes in building a better world, not just through architectural marvels but also through elevating  the society we live in. This is achieved through the group’s social initiatives:</P>
+                    <p class="margin0">Shantilal Muttha Foundation</p>
+                    <p>Bhartiya Jain Sanghatana </p>
+                    <p class="font-weight300">Both of which work towards bringing a strong educational foundation within the rural populace. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="project">
+        <div class="pt50 pb100">
+            <div class="text-center">
+                <h1 class="color-white font-didot f60">our initiative</h1>
+            </div>
+            <div class="container">
+                <div class="pt50 inblo">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="img-give brd-right text-center">
+                                <div class="pad20 ">
+                                    <img src="img/give/shantilal-image.jpg" alt="">
+                                </div>
+                                <div class="text-center mpb22">
+                                    <a ui-sref="shantilal" class="color-white font-weight300 enter border-enter">ENTER</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="img-give text-center">
+                                <div class="pad20">
+                                    <img src="img/give/bjs.jpg" alt="">
+                                </div>
+                                <div class="text-center mpb22">
+                                    <a ui-sref="bjs" class="color-white font-weight300 enter border-enter">ENTER</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="pt6">
+            <div class="row">
+                <div class="col-custom-6 pr3">
+                    <div class="img-holder pb3">
+                        <img src="img/give/g1.jpg" class="img-responsive" alt="">
+                    </div>
+                </div>
+                <div class="col-custom-7 pl3">
+                    <div class="img-holders pb3">
+                        <img src="img/give/g2.jpg" class="img-responsive" alt="">
+                    </div>
+                    <div class="img-holders pt3">
+                        <img src="img/give/g3.jpg" class="img-responsive" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="text-center pt30">
+            <h1 class="font-weight300">GET IN TOUCH</h1>
+        </div>
+       <div class="row pt30">
+                    <div class="col-md-offset-2 col-md-8">
+                        <div class="row">
+                            <form ng-submit="contactsubmit(formData);" name="contactForm">
+                                <div class="col-md-6">
+
+                                    <div class="form-group getintouch">
+                                        <!-- <label for="exampleInputEmail1">Name</label> -->
+                                       
+                                     <input type="text" class="form-control bg-input color-black" id="exampleInputEmail1" name="Name" placeholder="Name"  ng-model="formData.name" required aplha-only>
+                                    </div>
+                                        <div class="error-msg" ng-if="contactForm.Name.$invalid && contactForm.Name.$touched">Please Enter Your Name</div>
+
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="form-group getintouch">
+                                        <!-- <label for="exampleInputEmail1">Email</label> -->
+                                        <input type="Email" class="form-control bg-input color-black" name="Email" id="exampleInputEmail1" placeholder="Email" ng-model="formData.email" required>
+                                    </div>
+                                    <div class="error-msg" ng-if="contactForm.Email.$invalid && contactForm.Email.$touched">Please Enter Your Email</div>
+                                </div>
+                                 <div class="row pb30">
+                            <div class="col-md-12">
+                                <div class="form-group getintouch">
+                                    <!-- <label for="exampleInputEmail1">Enquiry</label> -->
+                                    <input type="Enquiry" class="form-control bg-input color-black" name="Enquiry" id="exampleInputEmail1" placeholder="Enquiry"  ng-model="formData.enquiry" required>
+                                </div>
+                                 <div class="error-msg" ng-if="contactForm.Enquiry.$invalid && contactForm.Enquiry.$touched">Please Enter Your Enquiry</div>
+                                  <div class="submit-btn float-right">
+                                  <button type="submit" class="btn-submit" name="button" >
+                                  Submit
+                                      </button> 
+                                    
+                                  </div>
+                            </div>
+                        </div>
+                            </form>
+                        </div>
+                       
+                    </div>
+
+                </div>
+    </div>
+</section>
