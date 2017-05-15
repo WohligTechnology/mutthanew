@@ -365,8 +365,10 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             _id: $scope.paramId
         }
         ContentService.getProjectWithId(projectId, function (data) {
-            console.log("project: ", data);
             $scope.project = data.data.data;
+            $scope.designFeatures = _.split($scope.project.designFeature, '\n');
+            $scope.keyDistances = _.split($scope.project.keyDistance, '\n');
+            $scope.specifications = _.split($scope.project.specification, '\n');
         });
 
         $scope.accordian = [];
