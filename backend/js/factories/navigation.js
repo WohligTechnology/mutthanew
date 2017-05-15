@@ -7,6 +7,11 @@ var uploadurl = imgurl;
 
 myApp.factory('NavigationService', function ($http) {
     var navigation = [{
+        name: "Home Sliders",
+        classis: "active",
+        sref: "#!/page/viewHomeSlider//",
+        icon: "phone"
+    }, {
         name: "Build",
         classis: "active",
         sref: "#!/page/viewBuild//",
