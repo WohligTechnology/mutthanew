@@ -4,7 +4,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         $scope.menutitle = NavigationService.makeactive("Home");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-        TemplateService.header = "views/header.html";
+        TemplateService.header = "views/template/header.html";
         // TemplateService.header = "";
         $scope.mySlides = [
             'img/home/1.jpg',

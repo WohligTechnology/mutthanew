@@ -7,21 +7,14 @@ myApp.service('TemplateService', function () {
     this.year = d.getFullYear();
 
     this.init = function () {
+        this.headermenu = "views/template/headermenu.html";
         this.header = "views/template/header.html";
-        this.menu = "views/template/menu.html";
-        this.content = "views/content/content.html";
-        this.footer = "views/template/footer.html";
-    };
-
-    this.init = function () {
-        this.headermenu = "views/headermenu.html";
-        this.header = "views/header.html";
         // this.header = "views/header1.html";
-        this.menu = "views/menu.html";
-        this.slider = "views/slider.html";
+        this.menu = "views/template/menu.html";
+        this.slider = "views/template/slider.html";
         this.content = "views/content/content.html";
-        this.footermenu = "views/footermenu.html";
-        this.footer = "views/footer.html";
+        this.footermenu = "views/template/footermenu.html";
+        this.footer = "views/template/footer.html";
     };
 
     this.changecontent = function (page) {
