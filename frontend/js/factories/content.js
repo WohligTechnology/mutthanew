@@ -14,6 +14,14 @@ myApp.factory("ContentService", function ($http) {
                 method: 'POST',
                 withCredentials: false
             }).then(callback);
+        },
+
+        getEnabledClients: function (callback) {
+            $http({
+                url: adminurl + 'Clients/getAllEnabled',
+                method: 'POST',
+                withCredentials: false
+            }).then(callback);
         }
     }
 })

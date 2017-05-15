@@ -301,37 +301,16 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
     //   });
     //
     // })
-    .controller('ClientCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('ClientCtrl', function ($scope, $timeout, TemplateService, NavigationService, ContentService) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("client");
         $scope.menutitle = NavigationService.makeactive("Client");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
 
-        $scope.client = [{
-            img: "img/client/c1.png"
-
-        }, {
-            img: "img/client/c2.png"
-
-        }, {
-            img: "img/client/c3.png"
-
-        }, {
-            img: "img/client/c4.png"
-
-        }, {
-            img: "img/client/c5.png"
-
-        }, {
-            img: "img/client/c6.png"
-
-        }, {
-            img: "img/client/c7.png"
-
-        }];
-
-
+        ContentService.getEnabledClients(function (data) {
+            $scope.clients = _.chunk(data.data.data, 2);
+        });
     })
     .controller('ProjectCtrl', function ($scope, $state, TemplateService, NavigationService, $timeout, $stateParams, $uibModal) {
         //Used to name the .html file

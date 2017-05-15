@@ -24,8 +24,10 @@ module.exports = mongoose.model('Clients', schema);
 
 var exports = _.cloneDeep(require("sails-wohlig-service")(schema));
 var model = {
-    getAll: function (callback) {
-        this.find({}).exec(function (err, found) {
+    getAllEnabled: function (callback) {
+        this.find({
+            status: 'Enabled'
+        }).exec(function (err, found) {
             if (err) {
                 console.log(err);
                 callback(err, null);

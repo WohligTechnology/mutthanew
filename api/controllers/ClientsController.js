@@ -10,8 +10,8 @@ var controller = {
             })
     },
 
-    getAll: function (req, res) {
-        Clients.getAll(res.callback);
+    getAllEnabled: function (req, res) {
+        Clients.getAllEnabled(res.callback);
     },
 
     findLimited: function (req, res) {
