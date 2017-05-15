@@ -1,0 +1,60 @@
+{
+    "title": "Create OfficeDetails",
+    "name": "OfficeDetails",
+    "jsonPage": "viewOfficeDetails",
+    "desciption": "",
+    "pageType": "create",
+    "urlFields": ["OfficeDetails"],
+    "fields": [{
+        "name": "Address",
+        "type": "textarea",
+        "tableRef": "officeAddr",
+        "id": "addr",
+        "validation": ["required", "trim", ""],
+        "url": ""
+    }, {
+        "name": "Telephone",
+        "type": "text",
+        "tableRef": "officeTel",
+        "id": "tel",
+        "validation": ["required", "trim", ""],
+        "url": "",
+        "view": true
+    }, {
+        "name": "Fax",
+        "type": "text",
+        "tableRef": "officeFax",
+        "id": "fax",
+        "validation": ["required", "trim", ""],
+        "url": ""
+    }, {
+        "name": "Email",
+        "type": "text",
+        "tableRef": "officeEmail",
+        "id": "email",
+        "validation": ["required", "trim", ""],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitOfficeDetails",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewOfficeDetails"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewOfficeDetails"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "OfficeDetails/save"
+    }
+}
