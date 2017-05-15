@@ -18,7 +18,7 @@ myApp.factory('NavigationService', function () {
     ];
 
     return {
-        getNavigation: function () {
+        getnav: function () {
             return navigation;
         },
 
