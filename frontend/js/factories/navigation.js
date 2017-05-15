@@ -35,14 +35,5 @@ myApp.factory('NavigationService', function () {
             }
             return menuname;
         },
-
-        ContactSave: function (formdata, callback) {
-            $http({
-                url: adminurl + 'ContactUs/save',
-                method: 'POST',
-                withCredentials: false,
-                data: formdata
-            }).success(callback);
-        },
     };
 });

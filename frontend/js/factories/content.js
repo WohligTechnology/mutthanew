@@ -22,6 +22,23 @@ myApp.factory("ContentService", function ($http) {
                 method: 'POST',
                 withCredentials: false
             }).then(callback);
+        },
+
+        ContactSave: function (formdata, callback) {
+            $http({
+                url: adminurl + 'ContactUs/saveContact',
+                method: 'POST',
+                withCredentials: false,
+                data: formdata
+            }).then(callback);
+        },
+
+        getOfficeDetails: function (callback) {
+            $http({
+                url: adminurl + 'OfficeDetails/getOfficeDetails',
+                method: 'POST',
+                withCredentials: false
+            }).then(callback);
         }
     }
 })

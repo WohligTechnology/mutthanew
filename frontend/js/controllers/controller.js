@@ -196,7 +196,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
 
     })
 
-    .controller('ContactCtrl', function ($scope, $state, TemplateService, NavigationService, $timeout, $uibModal) {
+    .controller('ContactCtrl', function ($scope, $state, $timeout, $uibModal, TemplateService, NavigationService, ContentService) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("contact");
         $scope.menutitle = NavigationService.makeactive("Contact");
@@ -204,10 +204,13 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         $scope.navigation = NavigationService.getnav();
         $scope.validEmail = /^[a-z]+[@][a-z]+[.]+[a-z]*$/;
 
+        ContentService.getOfficeDetails(function (data) {
+            $scope.officeDetails = data.data.data;
+        });
 
         $scope.contactsubmit = function (formData) {
-            console.log("hi contact");
-            NavigationService.ContactSave(formData, function (data) {
+            console.log("hi contact: ", formData);
+            ContentService.ContactSave(formData, function (data) {
                 console.log("m in give", data);
                 if (data) {
                     $scope.thanks();
@@ -500,18 +503,6 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             console.log("Know: ", $scope.know);
             $scope.managements = _.sortBy($scope.know.management, 'order');
         });
-
-        $scope.management = [{
-            img: "img/ceo.jpg",
-            name: "Sameer Muttha",
-            desg: "CEO",
-            desc: "Sameer Muttha is the face of a new India; bold, innovative, vibrant, determined and never troubled by ambiguity or uncertainty. He took to his father's ability of a businessman and brought in with him higher goals for the Muttha Group. Today, as the Managing Director of Muttha, Sameer is determined to take forward his father’s vision. He quickly set about redefining its rules. Within a short time, the Muttha Group has become one of India’s most successful commercial real estate companies. "
-        }, {
-            img: "img/ceo2.jpg",
-            name: " Shantilal Muttha",
-            desg: "CEO",
-            desc: "Shantilal Muttha is a social entrepreneur  committed to his work in the development sector for the last 30 years. Having risen from extremely humble origins, he realized the infinite power of entrepreneurship to sow the seeds for positive change and transformation in society. He founded the Bharatiya Jain Sanghatana (BJS) in 1985 as a non-political, secular, non-profit organization with a vision ‘to collectively contribute towards nation-building through a holistic development of the society'."
-        }];
 
     })
 

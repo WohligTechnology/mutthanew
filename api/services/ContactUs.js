@@ -28,6 +28,23 @@ module.exports = mongoose.model('ContactUs', schema);
 
 var exports = _.cloneDeep(require("sails-wohlig-service")(schema));
 var model = {
+    saveContact: function (data, callback) {
+        console.log(data);
+        ContactUs.saveData(data, function (err, result) {
+            if (err) {
+                callback(err, null);
+            } else if (data) {
+                callback(null, result);
+            } else {
+                callback({
+                    message: {
+                        data: "Invalid credentials"
+                    }
+                });
+            }
+        });
+    },
+
     getAll: function (callback) {
         this.find({}).exec(function (err, found) {
             if (err) {
