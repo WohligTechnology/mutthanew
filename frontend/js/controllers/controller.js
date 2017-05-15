@@ -313,7 +313,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             $scope.clients = _.chunk(data.data.data, 2);
         });
     })
-    .controller('ProjectCtrl', function ($scope, $state, TemplateService, NavigationService, $timeout, $stateParams, $uibModal) {
+    .controller('ProjectCtrl', function ($scope, $state, $timeout, $stateParams, $uibModal, TemplateService, NavigationService, ContentService) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("project");
         $scope.menutitle = NavigationService.makeactive("Project");
@@ -361,6 +361,14 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             })
         };
         $scope.paramId = $stateParams.id;
+        var projectId = {
+            _id: $scope.paramId
+        }
+        ContentService.getProjectWithId(projectId, function (data) {
+            console.log("project: ", data);
+            $scope.project = data.data.data;
+        });
+
         $scope.accordian = [];
         $scope.accordian.push({
             isFirstOpen: true,

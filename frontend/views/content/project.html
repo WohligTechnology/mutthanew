@@ -35,42 +35,13 @@
         <div class="container">
             <div class="project-desc">
                 <div class="text-center">
-                    <h1 class="font-didot f45">{{projectDetail.name}}</h1>
+                    <h1 class="font-didot f45">{{project.name}}</h1>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="project-desc" ng-if="projectDetail.id == 1">
                             <p class="font-weight300">
-                                This magnificent commercial structure has a character of its own. It stands tall and strong, with a futuristic design that is progressive and liberal. The entire outer façade lends the building a stunning character.</p>
-                            <p class="font-weight300">
-                                Muttha Chambers I is situated on Senapati Bapat Road, a prime location for businesses in Pune. Muttha Chambers houses some of the most reputed business establishments from around the world. A prime location and HUB to various industrial sectors right
-                                from Auto to Medical and more. A well planned location, Muttha Chambers I encompasses all that is required for a complete and constructive corporate environment.
-                            </p>
-                        </div>
-                        <div class="project-desc" ng-if="projectDetail.id == 2">
-                            <p class="font-weight300">Muttha Chambers II is situated on Senapati Bapat Road, a prime location for businesses in Pune. Muttha Chambers houses some of the most reputed business establishments from around the world. A prime location and HUB to various
-                                industrial sectors right from Auto to Medical and more.
-                            </p>
-                            <p class="font-weight300">
-                                A well planned location, Muttha Chambers II encompasses all that is required for a complete and constructive corporate environment.
-                            </p>
-                        </div>
-                        <div class="project-desc" ng-if="projectDetail.id == 3">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam culpa inventore doloremque necessitatibus eum repellat magnam aliquid accusantium. Illo facilis tempora eligendi eum ipsam laborum odit quam adipisci quod fugit.
-                        </div>
-                        <div class="project-desc" ng-if="projectDetail.id == 4">
-                            <p class="font-weight300">An epitome of growth and an expression of path breaking innovation, the private IT Park, Muttha Towers at Yerwada-Pune is spread over 3 Lac square-feet.
-                            </p>
-                            <p class="font-weight300">
-                                It is a well planned area that is situated amidst a good neighborhood with shopping and entertainment centers.
-                            </p>
-                        </div>
-                        <div class="project-desc" ng-if="projectDetail.id == 5">
-                            <p class="font-weight300">A carefully crafted design, Muttha Symphony defines symmetry, perfection and balance, which are all of the factors needed to promote good business.
-                            </p>
-                        </div>
-                         <div class="project-desc" ng-if="projectDetail.id == 6">
-                            <p class="font-weight300">Flexibility is at core of everything.
+                                {{project.description}}
                             </p>
                         </div>
                     </div>
@@ -670,7 +641,7 @@
 
                                     <div class="form-group getintouch">
                                         <!-- <label for="exampleInputEmail1">Email</label> -->
-                                        <input type="Email" class="form-control bg-input color-black" id="exampleInputEmail1" name="Email" placeholder="Email" ng-model="formData.email" required ng-pattern="/^[a-z]+[@][a-z]+[.]+[a-z]*$/">
+                                        <input type="email" class="form-control bg-input color-black" id="exampleInputEmail1" name="Email" placeholder="Email" ng-model="formData.email" required>
                                     </div>
                                 </div>
                                  <div class="row pb30">
