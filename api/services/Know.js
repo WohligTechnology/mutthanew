@@ -29,7 +29,7 @@ module.exports = mongoose.model('Know', schema);
 
 var exports = _.cloneDeep(require("sails-wohlig-service")(schema));
 var model = {
-    getAll: function (data, callback) {
+    getAll: function (callback) {
         Know.find({}).exec(function (err, found) {
             if (err) {
                 console.log(err);
@@ -46,7 +46,7 @@ var model = {
         });
     },
 
-    getOne: function (data, callback) {
+    getOne: function (callback) {
         Know.findOne({
             "_id": data._id
         }).exec(function (err, found) {

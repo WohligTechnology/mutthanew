@@ -29,29 +29,11 @@ var controller = {
     },
 
     getOne: function (req, res) {
-
-        if (req.body) {
-            Subscribe.getOne(req.body, res.callback);
-        } else {
-            res.json({
-                value: false,
-                data: "Invalid Request"
-            });
-        }
+        Subscribe.getOne(res.callback);
     },
 
     getAll: function (req, res) {
-        function callback(err, data) {
-            Global.response(err, data, res);
-        }
-        if (req.body) {
-            Subscribe.getAll(req.body, res.callback);
-        } else {
-            res.json({
-                value: false,
-                data: "Invalid Request"
-            });
-        }
+        Subscribe.getAll(res.callback);
     },
 
     findLimited: function (req, res) {

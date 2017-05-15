@@ -32,7 +32,7 @@ module.exports = mongoose.model('GetInTouch', schema);
 
 var exports = _.cloneDeep(require("sails-wohlig-service")(schema));
 var model = {
-    getAll: function (data, callback) {
+    getAll: function (callback) {
         GetInTouch.find({}).populate('project').exec(function (err, found) {
             if (err) {
                 console.log(err);
@@ -44,7 +44,7 @@ var model = {
             }
         });
     },
-    getOne: function (data, callback) {
+    getOne: function (callback) {
         GetInTouch.findOne({
             "_id": data._id
         }).populate('project').exec(function (err, found) {

@@ -80,7 +80,7 @@ var model = {
             callback(null, {});
         }
     },
-    getAll: function (data, callback) {
+    getAll: function (callback) {
         this.find({}).exec(function (err, found) {
             if (err) {
                 console.log(err);
@@ -92,7 +92,7 @@ var model = {
             }
         });
     },
-    getOne: function (data, callback) {
+    getOne: function (callback) {
         this.findOne({
             "_id": data._id
         }).exec(function (err, found) {

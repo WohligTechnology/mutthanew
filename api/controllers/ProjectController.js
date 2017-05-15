@@ -15,29 +15,11 @@ var controller = {
     },
 
     getOne: function (req, res) {
-
-        if (req.body) {
-            Project.getOne(req.body, res.callback);
-        } else {
-            res.json({
-                value: false,
-                data: "Invalid Request"
-            });
-        }
+        Project.getOne(res.callback);
     },
 
     getAll: function (req, res) {
-        function callback(err, data) {
-            Global.response(err, data, res);
-        }
-        if (req.body) {
-            Project.getAll(req.body, res.callback);
-        } else {
-            res.json({
-                value: false,
-                data: "Invalid Request"
-            });
-        }
+        Project.getAll(res.callback);
     },
 
     findLimited: function (req, res) {
