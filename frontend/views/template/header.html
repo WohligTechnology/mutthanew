@@ -52,42 +52,42 @@
         <div class="container ">
             <div class="clearfix">
 
-            <div class="absoluted pull-left" ng-click="getMenu();">
-                <div class="mt35 ">
-                    <div class="hamburger">
-             <button type="button" class="navbar" >
+                <div class="absoluted pull-left" ng-click="getMenu();">
+                    <div class="mt35 ">
+                        <div class="hamburger">
+                            <button type="button" class="navbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-        </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="logos pull-left">
-                <a ui-sref="home" class="navbar-brand">
-                    <img src="img/logo.png" class="img-responsive " alt="logo">
-                </a>
-            </div>
-  <div class="collapse navbar-collapse" id="nav-collapse">
-               <div ng-include="template.menu" class="template menu"></div>
-               <div class="social-icon float-right hidden-xs">
-<div class="pos-re">
-  <div class="img-abs">
-    <img src="img/searchh.png" alt="">
-  </div>
-<div class="ui-sl">
-  <ui-select ng-model="country.selected" class="search-drop">
-      <ui-select-match placeholder="Search Project">{{$select.selected.name}}</ui-select-match>
-      <ui-select-choices repeat="country in pages | filter: $select.search">
-          <!--<a ng-if="buisness" href="#/build">Muttha Business Center</a>-->
-          <span  ng-bind-html="country.name | highlight: $select.search" ui-sref="{{country.link}}"></span>
-      </ui-select-choices>
-  </ui-select>
-</div>
+                <div class="logos pull-left">
+                    <a ui-sref="home" class="navbar-brand">
+                        <img src="img/logo.png" class="img-responsive " alt="logo">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="nav-collapse">
+                    <div ng-include="template.menu" class="template menu"></div>
+                    <div class="social-icon float-right hidden-xs">
+                        <div class="pos-re">
+                            <div class="img-abs">
+                                <img src="img/searchh.png" alt="">
+                            </div>
+                            <div class="ui-sl">
+                                <ui-select ng-model="country.selected" class="search-drop">
+                                    <ui-select-match placeholder="Search Project">{{$select.selected.name}}</ui-select-match>
+                                    <ui-select-choices repeat="country in pages | filter: $select.search">
+                                        <!--<a ng-if="buisness" href="#/build">Muttha Business Center</a>-->
+                                        <span ng-bind-html="country.name | highlight: $select.search" ui-sref="{{country.link}}"></span>
+                                    </ui-select-choices>
+                                </ui-select>
+                            </div>
 
-</div>
-               </div>
-        </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
@@ -100,45 +100,45 @@
                 <div class="clearfix"></div>
                 <!--<h3 class="uppercase text-center">menu</h3>-->
                 <!--<div class="template menu text-center" ng-include="template.menu"></div>-->
-<ul class="slide-menu">
-    <h3 class="text-uppercase">menu</h3>
-    <li>
-        <h4 class="uppercase f30">
-          <a href="#/know">Know</a>
-          </h4>
-    </li>
+                <ul class="slide-menu">
+                    <h3 class="text-uppercase">menu</h3>
+                    <li>
+                        <h4 class="uppercase f30">
+                            <a ui-sref="know">Know</a>
+                        </h4>
+                    </li>
 
-      <li>
-        <h4 class="uppercase f30">
-          <a href="#/build">Build</a>
-          </h4>
-    </li>
-     <li>
-        <h4 class="uppercase f30">
-          <a href="#/give">Give</a>
-          </h4>
-    </li>
-      <!-- <li>
+                    <li>
+                        <h4 class="uppercase f30">
+                            <a ui-sref="build">Build</a>
+                        </h4>
+                    </li>
+                    <li>
+                        <h4 class="uppercase f30">
+                            <a ui-sref="give">Give</a>
+                        </h4>
+                    </li>
+                    <!-- <li>
         <h4 class="uppercase f30">
           <a href="#/media">Media </a>
           </h4>
     </li> -->
-    <li>
-        <h4 class="uppercase f30">
-           <a href="#/client">Clients</a>
-          </h4>
-    </li>
-     <li>
-        <h4 class="uppercase f30">
-           <a href="#/careers">Careers</a>
-          </h4>
-    </li>
-       <li>
-        <h4 class="uppercase f30">
-            <a href="#/contact">Contact Us</a>
-          </h4>
-    </li>
-</ul>
+                    <li>
+                        <h4 class="uppercase f30">
+                            <a ui-sref="client">Clients</a>
+                        </h4>
+                    </li>
+                    <li>
+                        <h4 class="uppercase f30">
+                            <a ui-sref="careers">Careers</a>
+                        </h4>
+                    </li>
+                    <li>
+                        <h4 class="uppercase f30">
+                            <a ui-sref="contact">Contact Us</a>
+                        </h4>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
