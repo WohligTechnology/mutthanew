@@ -8,7 +8,8 @@ var myApp = angular.module('myApp', [
     'ngAnimate',
     'ngSanitize',
     'angular-flexslider',
-    'ui.swiper'
+    'ui.swiper',
+    'ui.select'
 ]);
 
 // Define all the routes below
