@@ -29,7 +29,14 @@ var controller = {
     },
 
     getOne: function (req, res) {
-        Subscribe.getOne(res.callback);
+        if (req.body)
+            Subscribe.getOne(req.body, res.callback);
+        else
+            res.json({
+                message: {
+                    data: "Invalid request!"
+                }
+            })
     },
 
     getAll: function (req, res) {

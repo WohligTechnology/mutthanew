@@ -509,12 +509,18 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
     //   $scope.navigation = NavigationService.getnav();
     // })
 
-    .controller('KnowCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('KnowCtrl', function ($scope, $timeout, TemplateService, NavigationService, ContentService) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("know");
         $scope.menutitle = NavigationService.makeactive("Know");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+
+        ContentService.getKnow(function (data) {
+            $scope.know = data.data.data[0];
+            console.log("Know: ", $scope.know);
+            $scope.managements = _.sortBy($scope.know.management, 'order');
+        });
 
         $scope.management = [{
             img: "img/ceo.jpg",

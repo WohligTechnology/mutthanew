@@ -15,7 +15,14 @@ var controller = {
     },
 
     getOne: function (req, res) {
-        Project.getOne(res.callback);
+        if (req.body)
+            Project.getOne(req.body, res.callback);
+        else
+            res.json({
+                message: {
+                    data: "Invalid request!"
+                }
+            })
     },
 
     getAll: function (req, res) {

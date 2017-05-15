@@ -44,7 +44,7 @@ var model = {
             }
         });
     },
-    getOne: function (callback) {
+    getOne: function (data, callback) {
         GetInTouch.findOne({
             "_id": data._id
         }).populate('project').exec(function (err, found) {

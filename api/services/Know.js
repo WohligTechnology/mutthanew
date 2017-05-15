@@ -47,7 +47,7 @@ var model = {
         });
     },
 
-    getOne: function (callback) {
+    getOne: function (data, callback) {
         Know.findOne({
             "_id": data._id
         }).exec(function (err, found) {

@@ -6,6 +6,14 @@ myApp.factory("ContentService", function ($http) {
                 method: 'POST',
                 withCredentials: false
             }).then(callback);
+        },
+
+        getKnow: function (callback) {
+            $http({
+                url: adminurl + 'Know/getAll',
+                method: 'POST',
+                withCredentials: false
+            }).then(callback);
         }
     }
 })

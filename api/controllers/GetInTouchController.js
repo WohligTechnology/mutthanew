@@ -1,7 +1,13 @@
 module.exports = _.cloneDeep(require("sails-wohlig-controller"));
 var controller = {
     getOne: function (req, res) {
-        GetInTouch.getOne(res.callback);
+        if (req.body)
+            GetInTouch.getOne(req.body, res.callback);
+        else
+            res.json({
+                value: false,
+                data: "Please provide parameters"
+            })
     },
 
     getAll: function (req, res) {

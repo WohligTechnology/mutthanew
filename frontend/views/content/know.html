@@ -48,81 +48,25 @@
       <div class="col-md-6 col-sm-12 col-xs-12 padding0">
         <div class="banner know-banners hidden-xs" auto-height>
           <div class="head-font head-sz">
-            <h1 class="text-center">KNOW</h1>
+            <h1 class="text-center">{{know.title}}</h1>
           </div>
         </div>
         <div class="banner back-banners visible-xs" style="height: 250px;">
           <div class="head-font head-sz">
-            <h1 class="text-center">KNOW</h1>
+            <h1 class="text-center">{{know.title}}</h1>
           </div>
         </div>
       </div>
 
-    <div class="col-md-6 col-sm-12 col-xs-12 padding0">
-      <div class="pad-box overview" auto-height>
-<div class="mt60">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class=" gold font-didot">OVERVIEW</h1>
-        </div>
-        <div class=" col-md-10">
-          <p class="font-weight300">Established in 1996, the Muttha Group has significantly contributed to the architecture of Pune. From the very first foundation stone that was laid the group has incorporated sound and innovative design concepts, involved some of the world's best
-            architects and designers, used state-of-the-art infrastructure to make sure that the projects are nothing short of perfection.</p>
-
-          <p class="font-weight300">Muttha Group has developed many large townships in Pune area that include:
-            <ul class="font-weight300" style="padding-left: 15px;">
-              <li>Sakal Nagar in Baner</li>
-              <li>Anand Nagar in Kothrud</li>
-              <li>Atma Nagar in PCMC</li>
-            </ul>
-          </p>
-          <p class="font-weight300">All of these have gone on to become important landmarks of the city and have been the recipients of many awards.
-          </p>
-          <p class="font-weight300">The group implements many high-end projects in the IT, Commercial, Business, Residential, Premium and De Luxe property segments.
-          </p>
-          <p class="font-weight300">Muttha Group focuses on property development of the mixed built which integrates Residential, Retail and IT spaces into one either as a single building project or a cluster of buildings.
-          </p>
-          <p class="font-weight300">The group’s vision is to develop properties over 7.5 million square feet within the mixed property segment by next couple of years.</p>
-        </div>
-      </div>
-      </div>
-      </div>
-    </div>
-  </div>
-  </div>
-</section>
-
-
-  <!-- management -->
-  <div class="mt60 mb60">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="management-title text-center">
-            <h1 class="font-didot">Management</h1>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-          <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-12 mmb30" ng-repeat="data in management track by $index">
-              <div class="management-box">
-                <div class="bg-user">
-                  <img src="img/bg-user2.png" class="full-image hides">
-                  <div class="img-boxs">
-                    <img ng-src="{{data.img}}">
-                  </div>
-                </div>
-                <div class="title text-center">
-                  <h5>{{data.name}} </h5>
-                  <hr>
-                </div>
-                <div class="info">
-                  <p class="font-weight300">
-                    {{data.desc}}
-                  </p>
-                </div>
+      <div class="col-md-6 col-sm-12 col-xs-12 padding0">
+        <div class="pad-box overview" auto-height>
+          <div class="mt60">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class=" gold font-didot">OVERVIEW</h1>
+              </div>
+              <div class=" col-md-10">
+                <p class="font-weight300">{{know.overview}}</p>
               </div>
             </div>
           </div>
@@ -130,24 +74,62 @@
       </div>
     </div>
   </div>
+</section>
 
 
-  <div class="vision-mission">
-    <div class="container">
-      <div class="styles-mob" style="padding:50px 0;">
+<!-- management -->
+<div class="mt60 mb60">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="management-title text-center">
+          <h1 class="font-didot">Management</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8">
         <div class="row">
-          <!-- <div class="vertline"> -->
-          <div class="col-md-offset-2 col-md-3 col-sm-6 col-xs-12">
-            <div class="vision pad-bot color-white no-bod">
-              <div class="vision-title text-center">
-                <h2 class="font-didot mar0">mission</h2>
-                <hr class="mission-vision">
+          <div class="col-md-6 col-sm-6 col-xs-12 mmb30" ng-repeat="mgmt in managements track by $index">
+            <div class="management-box">
+              <div class="bg-user">
+                <!--<img src="{{mgmt.image | serverimage}}" class="full-image hides">-->
+                <div class="img-boxs">
+                  <img ng-src="{{mgmt.image | serverimage}}">
+                </div>
               </div>
-              <div class=" vissions-inform" >
-                <h3 class="text-justify font-weight300">To enhance the life of the people
-around the world through both
-real estate projects & philanthrophy.</h3>
-                <!--<span class="font25 to">To</span>
+              <div class="title text-center">
+                <h5>{{mgmt.name}} </h5>
+                <hr>
+              </div>
+              <div class="info">
+                <p class="font-weight300">
+                  {{mgmt.description}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="vision-mission">
+  <div class="container">
+    <div class="styles-mob" style="padding:50px 0;">
+      <div class="row">
+        <!-- <div class="vertline"> -->
+        <div class="col-md-offset-2 col-md-3 col-sm-6 col-xs-12">
+          <div class="vision pad-bot color-white no-bod">
+            <div class="vision-title text-center">
+              <h2 class="font-didot mar0">mission</h2>
+              <hr class="mission-vision">
+            </div>
+            <div class=" vissions-inform">
+              <h3 class="text-justify font-weight300">{{know.mission}}</h3>
+              <!--<span class="font25 to">To</span>
                 <div class="create mt-10">
                   <span class="enhance">enhance</span>
                 </div>
@@ -166,23 +148,22 @@ real estate projects & philanthrophy.</h3>
                 <div class="lh50">
                   <span class="philo">projects &amp; philanthrophy</span>
                 </div>-->
-              </div>
             </div>
           </div>
-          <!-- </div> -->
-                    <div class="col-md-offset-2 col-md-3 col-sm-6 col-xs-12">
-            <div class="vision color-white no-bod no-border">
-              <div class="vision-title text-center">
-                <h2 class="font-didot mar0">PHILOSOPHY</h2>
-                <hr class="mission-vision">
-              </div>
-              <div class=" vissions-info">
-                <h3 class="text-justify font-weight300">We are an organisation that
-believes in the joy of living & giving.</h3>
-              </div>
+        </div>
+        <!-- </div> -->
+        <div class="col-md-offset-2 col-md-3 col-sm-6 col-xs-12">
+          <div class="vision color-white no-bod no-border">
+            <div class="vision-title text-center">
+              <h2 class="font-didot mar0">PHILOSOPHY</h2>
+              <hr class="mission-vision">
+            </div>
+            <div class=" vissions-info">
+              <h3 class="text-justify font-weight300">{{know.philosophy}}</h3>
             </div>
           </div>
-          <!--<div class="col-md-offset-2 col-md-3 col-sm-6 col-xs-12">
+        </div>
+        <!--<div class="col-md-offset-2 col-md-3 col-sm-6 col-xs-12">
             <div class="mission color-white ">
               <div class="mission-title text-center mb-xs">
                 <h2 class="font-didot mar0">PHILOSOPHY</h2>
@@ -206,8 +187,8 @@ believes in the joy of living & giving.</h3>
               </div>
             </div>
           </div>-->
-        </div>
       </div>
     </div>
   </div>
+</div>
 </section>
