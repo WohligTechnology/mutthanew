@@ -209,9 +209,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         });
 
         $scope.contactsubmit = function (formData) {
-            console.log("hi contact: ", formData);
             ContentService.ContactSave(formData, function (data) {
-                console.log("m in give", data);
                 if (data) {
                     $scope.thanks();
                     $timeout(function () {

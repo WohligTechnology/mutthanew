@@ -29,7 +29,6 @@ module.exports = mongoose.model('ContactUs', schema);
 var exports = _.cloneDeep(require("sails-wohlig-service")(schema));
 var model = {
     saveContact: function (data, callback) {
-        console.log(data);
         ContactUs.saveData(data, function (err, result) {
             if (err) {
                 callback(err, null);
