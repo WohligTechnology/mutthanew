@@ -2,29 +2,11 @@ module.exports = _.cloneDeep(require("sails-wohlig-controller"));
 var controller = {
 
     getOne: function (req, res) {
-
-        if (req.body) {
-            Build.getOne(req.body, res.callback);
-        } else {
-            res.json({
-                value: false,
-                data: "Invalid Request"
-            });
-        }
+        Build.getOne(req.body, res.callback);
     },
 
     getAll: function (req, res) {
-        function callback(err, data) {
-            Global.response(err, data, res);
-        }
-        if (req.body) {
-            Build.getAll(req.body, res.callback);
-        } else {
-            res.json({
-                value: false,
-                data: "Invalid Request"
-            });
-        }
+        Build.getAll(req.body, res.callback);
     },
 
     findLimited: function (req, res) {
