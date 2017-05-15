@@ -20,66 +20,66 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
     $stateProvider
         .state('home', {
             url: "/home",
-            templateUrl: "views/template.html",
+            templateUrl: tempateURL,
             controller: 'HomeCtrl'
         })
         //  .state('footer', {
         //   url: "/",
-        //   templateUrl: "views/template.html",
+        //   templateUrl: tempateURL,
         //   controller: 'FooterCtrl'
         // })
         .state('know', {
             url: "/know",
-            templateUrl: "views/template.html",
+            templateUrl: tempateURL,
             controller: 'KnowCtrl'
         })
         .state('careers', {
             url: "/careers",
-            templateUrl: "views/template.html",
+            templateUrl: tempateURL,
             controller: 'CareersCtrl'
         })
         .state('client', {
             url: "/client",
-            templateUrl: "views/template.html",
+            templateUrl: tempateURL,
             controller: 'ClientCtrl'
         })
         .state('contact', {
             url: "/contact",
-            templateUrl: "views/template.html",
+            templateUrl: tempateURL,
             controller: 'ContactCtrl'
         })
         // .state('media', {
         //   url: "/media",
-        //   templateUrl: "views/template.html",
+        //   templateUrl: tempateURL,
         //   controller: 'MediaCtrl'
         // })
         .state('project', {
             url: "/project/:id",
-            templateUrl: "views/template.html",
+            templateUrl: tempateURL,
             controller: 'ProjectCtrl'
         })
         // .state('projects', {
         //     url: "/projects/6",
-        //     templateUrl: "views/template.html",
+        //     templateUrl: tempateURL,
         //     controller: 'ProjectsCtrl'
         //   })
         .state('build', {
             url: "/build",
-            templateUrl: "views/template.html",
+            templateUrl: tempateURL,
             controller: 'BuildCtrl'
         })
         .state('give', {
             url: "/give",
-            templateUrl: "views/template.html",
+            templateUrl: tempateURL,
             controller: 'GiveCtrl'
         }).state('shantilal', {
             url: "/give/shantilal",
-            templateUrl: "views/template.html",
+            templateUrl: tempateURL,
             controller: 'ShantilalCtrl'
         })
         .state('bjs', {
             url: "/give/bjs",
-            templateUrl: "views/template.html",
+            templateUrl: tempateURL,
             controller: 'BjsCtrl'
         });
     $urlRouterProvider.otherwise("/home");

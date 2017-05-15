@@ -4,6 +4,45 @@
     <div class="container padding-container">
       <div class="nav-header">
         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/home"><img src="img/logo.png" alt="logo"> </a>
+        </div>
+ <div ng-include="template.menu" class="template menu pull-left"></div> 
+        <div class="collapse navbar-collapse " id="nav-collapse">
+               
+               <div class="social-icon2 pull-right hidden-xs">
+<div class="pos-re">
+  <div class="img-abs">
+    <img src="img/searchh.png" alt="">
+  </div>
+<div class="ui-sl">
+  <ui-select ng-model="country.selected" class="search-drop">
+      <ui-select-match placeholder="Search Project">{{$select.selected.name}}</ui-select-match>
+      <ui-select-choices repeat="country in pages | filter: $select.search">
+          <span ng-bind-html="country.name | highlight: $select.search" ui-sref="{{country.link}}"></span>
+      </ui-select-choices>
+  </ui-select>
+</div>
+
+</div>
+               </div>
+        </div>
+        </div>
+    </div>
+</nav>
+
+</header>-->
+<!--<header ng-controller="headerctrl">
+
+   <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container padding-container">
+      <div class="nav-header">
+        <div class="navbar-header">
              <div class="hamburger" ng-click="getMenu();">
              <button type="button" class="navbar" >
                 <span class="icon-bar"></span>
@@ -19,7 +58,7 @@
             </div>
             <a class="navbar-brand" href="#/home"><img src="img/logo.png" alt="logo"> </a>
         </div>
-
+       
 
         <div class="collapse navbar-collapse" id="nav-collapse">
                <div ng-include="template.menu" class="template menu"></div>
@@ -43,15 +82,15 @@
         <div class="clearfix"></div>
         </div>
     </div>
-
+       
 </nav>
 
 </header>-->
-<header ng-controller="headerctrl" class="fix-hidden">
-    <nav class="navbar navbar-fixed-top bg-white">
+<header ng-controller="headerctrl">
+    <nav class="navbar navbar-fixed-top ">
         <div class="container ">
             <div class="clearfix">
-
+    
             <div class="absoluted pull-left" ng-click="getMenu();">
                 <div class="mt35 ">
                     <div class="hamburger">
@@ -79,8 +118,7 @@
   <ui-select ng-model="country.selected" class="search-drop">
       <ui-select-match placeholder="Search Project">{{$select.selected.name}}</ui-select-match>
       <ui-select-choices repeat="country in pages | filter: $select.search">
-          <!--<a ng-if="buisness" href="#/build">Muttha Business Center</a>-->
-          <span  ng-bind-html="country.name | highlight: $select.search" ui-sref="{{country.link}}"></span>
+          <span ng-bind-html="country.name | highlight: $select.search" ui-sref="{{country.link}}"></span>
       </ui-select-choices>
   </ui-select>
 </div>
@@ -90,10 +128,10 @@
         </div>
 
             </div>
-
+        
 
             <div class="side-menu menu-out">
-                <span class="pull-right close-icon m25" ng-click="closeMenu();">
+                <span class="pull-right close-icon mt20" ng-click="closeMenu();">
                        <!--<img src="frontend/img/home/r4.png" class="img-responsive" alt="cross">-->
                     <i class="fa fa-2x fa-times" ></i>
                 </span>
@@ -118,27 +156,25 @@
           <a href="#/give">Give</a>
           </h4>
     </li>
-      <!-- <li>
+      <!--<li>
         <h4 class="uppercase f30">
-          <a href="#/media">Media </a>
+          <a ui-sref="partner">partner</a>
           </h4>
-    </li> -->
-    <li>
+    </li>-->
+    <!--<li>
         <h4 class="uppercase f30">
-           <a href="#/client">Clients</a>
-          </h4>
-    </li>
-     <li>
-        <h4 class="uppercase f30">
-           <a href="#/careers">Careers</a>
+          <a ui-sref="work">testimonials</a>
           </h4>
     </li>
        <li>
         <h4 class="uppercase f30">
-            <a href="#/contact">Contact Us</a>
+          <a ui-sref="work">contact us</a>
           </h4>
-    </li>
+    </li>-->
 </ul>
+                <!--<div class="mt30">
+                    <button class="btn btn-green btn-block text-up">Become a member</button>
+                </div>-->
             </div>
         </div>
     </nav>
