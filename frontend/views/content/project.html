@@ -1,792 +1,285 @@
 <section>
-    <section ng-if="paramId!='6'">
-    <div class="slider hidden-xs">
-        <!-- <flex-slider flex-slide="s in mySlides track by $index">
+	<section ng-if="paramId!='6'">
+		<div class="slider hidden-xs">
+			<!-- <flex-slider flex-slide="s in mySlides track by $index">
             <li>
 
                 <div class="project-banners" ng-style="{'background-image':'url({{s}})'}" auto-height></div>
                 <h2>{{noti.title}}</h2>
             </li>
         </flex-slider> -->
-        <div class="project-banners" ng-if="projectDetail.id == 1" ng-style="{'background-image':'url({{projectDetail.image}})'}" auto-height></div>
-        <div class="project-banners" ng-if="projectDetail.id == 2" ng-style="{'background-image':'url({{projectDetail.image}})'}" auto-height></div>
-        <div class="project-banners" ng-if="projectDetail.id == 3" ng-style="{'background-image':'url({{projectDetail.image}})'}" auto-height></div>
-        <div class="project-banners" ng-if="projectDetail.id == 4" ng-style="{'background-image':'url({{projectDetail.image}})'}" auto-height></div>
-        <div class="project-banners" ng-if="projectDetail.id == 5" ng-style="{'background-image':'url({{projectDetail.image}})'}" auto-height></div>
-         <!--<div class="project-banners" ng-if="projectDetail.id == 6" ng-style="{'background-image':'url({{projectDetail.image}})'}" auto-height></div>-->
-          <!-- <img ng-src="{{projectDetail.image}}" class="img-responsive"> -->
-        <!-- <div class="project-main tex-center">
+			<div class="project-banners" ng-if="projectDetail.id == 1" ng-style="{'background-image':'url({{projectDetail.image}})'}"
+				auto-height></div>
+			<div class="project-banners" ng-if="projectDetail.id == 2" ng-style="{'background-image':'url({{projectDetail.image}})'}"
+				auto-height></div>
+			<div class="project-banners" ng-if="projectDetail.id == 3" ng-style="{'background-image':'url({{projectDetail.image}})'}"
+				auto-height></div>
+			<div class="project-banners" ng-if="projectDetail.id == 4" ng-style="{'background-image':'url({{projectDetail.image}})'}"
+				auto-height></div>
+			<div class="project-banners" ng-if="projectDetail.id == 5" ng-style="{'background-image':'url({{projectDetail.image}})'}"
+				auto-height></div>
+			<!--<div class="project-banners" ng-if="projectDetail.id == 6" ng-style="{'background-image':'url({{projectDetail.image}})'}" auto-height></div>-->
+			<!-- <img ng-src="{{projectDetail.image}}" class="img-responsive"> -->
+			<!-- <div class="project-main tex-center">
             <img ng-src="{{projectDetail.img}}">
         </div> -->
-    </div>
+		</div>
 
-<!--//mobile ka background image//-->
+		<!--//mobile ka background image//-->
 
-     <div class="slider hidden-md hidden-sm visible-xs">   
-        <div class="project-banners" ng-if="projectDetail.id == 1" ng-style="{'background-image':'url({{projectDetail.mimage}})'}" auto-height></div>
-        <div class="project-banners" ng-if="projectDetail.id == 2" ng-style="{'background-image':'url({{projectDetail.mimage}})'}" auto-height></div>
-        <div class="project-banners" ng-if="projectDetail.id == 3" ng-style="{'background-image':'url({{projectDetail.mimage}})'}" auto-height></div>
-        <div class="project-banners" ng-if="projectDetail.id == 4" ng-style="{'background-image':'url({{projectDetail.mimage}})'}" auto-height></div>
-        <div class="project-banners" ng-if="projectDetail.id == 5" ng-style="{'background-image':'url({{projectDetail.mimage}})'}" auto-height></div>
-    </div>
+		<div class="slider hidden-md hidden-sm visible-xs">
+			<div class="project-banners" ng-if="projectDetail.id == 1" ng-style="{'background-image':'url({{projectDetail.mimage}})'}"
+				auto-height></div>
+			<div class="project-banners" ng-if="projectDetail.id == 2" ng-style="{'background-image':'url({{projectDetail.mimage}})'}"
+				auto-height></div>
+			<div class="project-banners" ng-if="projectDetail.id == 3" ng-style="{'background-image':'url({{projectDetail.mimage}})'}"
+				auto-height></div>
+			<div class="project-banners" ng-if="projectDetail.id == 4" ng-style="{'background-image':'url({{projectDetail.mimage}})'}"
+				auto-height></div>
+			<div class="project-banners" ng-if="projectDetail.id == 5" ng-style="{'background-image':'url({{projectDetail.mimage}})'}"
+				auto-height></div>
+		</div>
 
-    <!--//mobile ka background image//-->
-    <div class="grey-bg">
-        <div class="container">
-            <div class="project-desc">
-                <div class="text-center">
-                    <h1 class="font-didot f45">{{project.name}}</h1>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="project-desc" ng-if="projectDetail.id == 1">
-                            <p class="font-weight300">
-                                {{project.description}}
-                            </p>
-                        </div>
-                    </div>
-                </div>
+		<!--//mobile ka background image//-->
+		<div class="grey-bg">
+			<div class="container">
+				<div class="project-desc">
+					<div class="text-center">
+						<h1 class="font-didot f45">{{project.name}}</h1>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="project-desc" ng-if="projectDetail.id == 1">
+								<p class="font-weight300">
+									{{project.description}}
+								</p>
+							</div>
+						</div>
+					</div>
 
-            </div>
-            <div class="mt60">
-                <div class="row">
-                    <div class="col-md-6 ">
-                        <div class="back-box">
-                            <div class="row">
-                                <div class="col-md-6 padding0 col-sm-6 col-xs-6" ng-repeat="data in Project track by $index">
-                                    <img ng-src="{{data}}" class="img-responsive">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 pt30 pb100">
-                        <uib-accordion close-others="true" class="hidden-md hidden-lg" ng-if="projectDetail.id == 1">
-                            <uib-accordion-group is-open="accordian[0].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">Design and Features</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[0].isFirstOpen, 'fa fa-plus': !accordian[0].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                     <!-- <p class="padding0m">This magnificent commercial structure has a character of its own. It stands tall and strong, with a futuristic design that is progressive and liberal. The entire outer façade lends the building a stunning character.</p> -->
-                                    <ul class="padding0m">
-                                        <li>The Double Façade substantially reduces the energy consumption of the building.</li>
-                                        <li>Under EDGE Certification process from US GBC.</li>
-                                        <li>The building promotes an integrated environment which is conducive for businesses to collaborate.</li>
-                                        <li>The architecture is sustainable and eco-friendly.</li>
-                                        <li>A provision for handicapped washrooms on each floor.</li>
-                                        <li>A state-of-the-art reception – complete with a visitor management system.</li>
-                                        <li>A cafeteria within the premise – Bespoke.</li>
-                                        <li>Orientation of the floor plate ensures ample day light in the offices thereby creating a lively environment on the floor.
-                                        </li>
-                                        <li>Dedicated signage space available outside the building.</li>
-                                    </ul>
-                                </div>
-                            </uib-accordion-group>
-                            <uib-accordion-group is-open="accordian[1].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">Technical specifications</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[1].isFirstOpen, 'fa fa-plus': !accordian[1].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                    <ul class="padding0m">
-                                        <li>100% Laminated Glass windows.</li>
-                                        <li>Extensive surveillance system on all common areas.</li>
-                                        <li>High speed dedicated internet connectivity.</li>
-                                        <li>Advanced Fire Protection system.</li>
-                                        <li>Reprographics on each floor.</li>
-                                        <li>Dedicated hospitality & facility management team.</li>
-                                        <li>High-end and ergonomically proven furniture.</li>
-                                        <li>European Tile finishes in common areas and toilets.</li>
-                                        <li>High Tech communication systems for conferencing.</li>
-                                    </ul>
-                                </div>
-                            </uib-accordion-group>
-                            <uib-accordion-group is-open="accordian[2].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">key distances</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[2].isFirstOpen, 'fa fa-plus': !accordian[2].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                    <ul class="padding0m">
-                                        <li>30 minute drive to the Airport.</li>
-                                        <li>10 minute drive to the railway station.</li>
-                                        <li>Senapati Bapat Road is one of the main commercial centers of Pune.
-                                        It houses some of the most reputed business establishments from around the world like Cognizant, HOV and trade centers like MCCI and American Business Corner so on.</li>
-                                        <li>It is the prime location for various businesses and acts as a HUB to various businesses from Auto to IT to Medical etc.</li>
-                                        <li>Next to JW Marriott.</li>
-                                        <li>Next to Mymall shopping centre.</li>
-                                    </ul>
-                                </div>
-                            </uib-accordion-group>
-                        </uib-accordion>
-                          <uib-accordion close-others="true" class="hidden-md hidden-lg" ng-if="projectDetail.id == 2">
-                            <uib-accordion-group is-open="accordian[0].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">Design and Features</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[0].isFirstOpen, 'fa fa-plus': !accordian[0].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                    <p class="padding0m">The high quality design and finishing showcases an impressive enterance and lift lobbies. A combination of Alucobond panels and an attractive glass façade gives the entire business park a grand look.</p>
-                                </div>
-                            </uib-accordion-group>
-                            <uib-accordion-group is-open="accordian[1].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">Technical specifications</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[1].isFirstOpen, 'fa fa-plus': !accordian[1].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                    <ul class="padding0m">
-                                      
-                                         <li>Extensive surveillance systems in all common areas.</li>
-                                        <li>Fire Protection system.</li>
-                                        <li>Dedicated facility management team.</li>
-                                        <li>100% DG BackUp Ample Car / Two Wheeler Parks.</li>
-                                        <li>Packaged Air Conditioning.</li>
-                                
-                                    </ul>
-                                </div>
-                            </uib-accordion-group>
-                            <uib-accordion-group is-open="accordian[2].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">key distances</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[2].isFirstOpen, 'fa fa-plus': !accordian[2].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                    <ul class="padding0m">
-                                          <ul>
-                                        <li>Muttha Chambers II is situated on Senapati Bapat Road which is one of the main commercial centers of Pune.</li>
-                                        <li>The Airport is a 30 minute drive away.</li>
-                                        <li>The Railway Station is a 10 minute drive away.</li>
-                                        <li>Located inclose proximity to JW Mariott and Mymall shopping centre.</li>
-                                    </ul>
-                                      
-                                    </ul>
-                                </div>
-                            </uib-accordion-group>
-                        </uib-accordion>
-                        <!--<uib-accordion close-others="true" class="hidden-md hidden-lg" ng-if="productDetail.id == 2">
-                            <uib-accordion-group is-open="accordian[0].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">Design and Features</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[0].isFirstOpen, 'fa fa-plus': !accordian[0].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                    <p class="padding0m">This magnificent commercial structure has a character of its own. It stands tall and strong, with a futuristic design that is progressive and liberal. The entire outer façade lends the building a stunning character.</p>
-                                    <ul class="padding0m">
-                                        <li>The Double Façade substantially reduces the energy consumption of the building.</li>
-                                        <li>Under EDGE Certification process from US GBC.</li>
-                                        <li>The building promotes an integrated environment which is conducive for businesses to collaborate.</li>
-                                        <li>The architecture is sustainable and eco-friendly.</li>
-                                        <li>A provision for handicapped washrooms on each floor.</li>
-                                        <li>A state of the art reception – complete with a visitor management system.</li>
-                                        <li>A cafeteria within the premise – Bespoke.</li>
-                                        <li>Orientation of the floor plate ensures ample day light in the offices thereby creating a lively environment on the floor.
-                                        </li>
-                                        <li>Dedicated signage space available outside the building.</li>
-                                    </ul>
-                                </div>
-                            </uib-accordion-group>
-                            <uib-accordion-group is-open="accordian[1].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">Technical specifications</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[1].isFirstOpen, 'fa fa-plus': !accordian[1].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                    <ul class="padding0m">
-                                         <li>Extensive surveillance systems in all common areas.</li>
-                                        <li>Fire Protection system.</li>
-                                        <li>Dedicated facility management team.</li>
-                                        <li>100% DG BackUp Ample Car / Two Wheeler Parks.</li>
-                                        <li>Packaged Air Conditioning.</li>
-                                    </ul>
-                                </div>
-                            </uib-accordion-group>
-                            <uib-accordion-group is-open="accordian[2].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">key distances</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[2].isFirstOpen, 'fa fa-plus': !accordian[2].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                    <ul class="padding0m">
-                                      
-                                        <li>Muttha Chambers II is situated on Senapati Bapat Road which is one of the main commercial centers of Pune.</li>
-                                        <li>The Airport is a 30 minute drive away..</li>
-                                        <li>The Railway Station is a 10 minute drive away</li>
-                                        <li>Located inclose proximity to JW Mariott and Mymall shopping centre.</li>
-                                  
-                                    </ul>
-                                </div>
-                            </uib-accordion-group>
-                        </uib-accordion>-->
-                        <uib-accordion close-others="true" class="hidden-md hidden-lg" ng-if="projectDetail.id == 4">
-                            <uib-accordion-group is-open="accordian[0].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">Design and Features</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[0].isFirstOpen, 'fa fa-plus': !accordian[0].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                    <p class="padding0m">Muttha Towers is a Private IT Park with up to 80% space available for IT/ITES establishments and up to 20% space available for commercial establishments.</p>
-                                    <p class="padding0m">Overall, the area provides for a complete and constructive work ambience. Muttha towers has conceptualized a work culture that goes beyond just business.
-                                    </p>
-                                    <!-- <ul class="padding0m">
-                                      <li>The Double Façade substantially reduces the energy consumption of the building.</li>
-                                      <li>Under EDGE Certification process from US GBC.</li>
-                                      <li>The building promotes an integrated environment which is conducive for businesses to collaborate.</li>
-                                      <li>The architecture is sustainable and eco-friendly.</li>
-                                      <li>A provision for handicapped washrooms on each floor.</li>
-                                      <li>A state of the art reception – complete with a visitor management system.</li>
-                                      <li>A cafeteria within the premise – Bespoke.</li>
-                                      <li>Orientation of the floor plate ensures ample day light in the offices thereby creating a lively environment on the floor.
-                                      </li>
-                                      <li>Dedicated signage space available outside the building.</li>
-                                  </ul> -->
-                                </div>
-                            </uib-accordion-group>
-                            <uib-accordion-group is-open="accordian[1].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">Technical specifications</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[1].isFirstOpen, 'fa fa-plus': !accordian[1].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                    <ul class="padding0m">
-                                        <li>Data and voice connectivity by all major service providers.</li>
-                                        <li>Reliable power supply.</li>
-                                        <li>Large floor plates and column spaces.</li>
-                                        <li>Ample car parking space.</li>
-                                        <li>100% DG Backup.</li>
-                                        <li>Fire fighting system.</li>
-                                        <li>100% CCTV surveillance.</li>
-                                        <li>Packaged Air Conditioning.
-                                        </li>
-                                    </ul>
-                                </div>
-                            </uib-accordion-group>
-                            <uib-accordion-group is-open="accordian[2].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">key distances</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[2].isFirstOpen, 'fa fa-plus': !accordian[2].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                    <ul class="padding0m">
-                                        <li>The Airport is less than 3 kilometers away.</li>
-                                        <li>The Railway Station is less than 6 kilometers.</li>
-                                        <li>Shopping malls like Phoenix and Inorbit are in close proximity. </li>
-                                        <li>Hotels like Hyatt Regency, Novotel, Hyatt, Four Points by Sheraton and many more are in close proximity.</li>
-                                        <li>Muttha Towers has a well established public and social infrastructure.</li>
-                                        <li>The Muttha Towers is situated in the growth corridor of Pune which had an absorption of over 2.6 million sqft in 2014.</li>
-                                    </ul>
-                                </div>
-                            </uib-accordion-group>
-                        </uib-accordion>
-                        <!--<uib-accordion close-others="true" class="hidden-md hidden-lg" ng-if="projectDetail.id == 4">
-                            <uib-accordion-group is-open="accordian[0].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">Design and Features</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[0].isFirstOpen, 'fa fa-plus': !accordian[0].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                    <p class="padding0m">A project that is balanced with quality construction on one side and classy interiors on the other with a prime location and great connectivity.</p>
-                                </div>
-                            </uib-accordion-group>
-                            <uib-accordion-group is-open="accordian[1].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">Technical specifications</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[1].isFirstOpen, 'fa fa-plus': !accordian[1].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                    <ul class="padding0m">
-                                      
-                                        <li>Data and voice connectivity by all major service providers.</li>
-                                        <li>Reliable power supply.</li>
-                                        <li>Large floor plates and column spaces.</li>
-                                        <li>Ample car parking space.</li>
-                                        <li>100% DG Backup.</li>
-                                        <li>Fire fighting system.</li>
-                                        <li>100% CCTV surveillance.</li>
-                                        <li>Packaged Air Conditioning.
-                                        </li>
-                                
-                                    </ul>
-                                </div>
-                            </uib-accordion-group>
-                            <uib-accordion-group is-open="accordian[2].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">key distances</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[2].isFirstOpen, 'fa fa-plus': !accordian[2].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                    <ul class="padding0m">
-                                         <ul>
-                                        <li>The Airport is less than 3 kilometers away.</li>
-                                        <li>The Railway Station is less than 6 kilometers.</li>
-                                        <li>Shopping malls like Phoenix and Inorbit are in close proximity. </li>
-                                        <li>Hotels like Hyatt Regency, Novotel, Hyatt, Four Points by Sheraton and many more are in close proximity.</li>
-                                        <li>Muttha Towers has a well established public and social infrastructure.</li>
-                                        <li>Muttha Towers is situated in the growth corridor of Pune which had an absorption of over 2.6 million sqft in 2014.</li>
-                                    </ul>
-                                      
-                                    </ul>
-                                </div>
-                            </uib-accordion-group>
-                        </uib-accordion>-->
+				</div>
+				<div class="mt60">
+					<div class="row">
+						<div class="col-md-6 ">
+							<div class="back-box">
+								<div class="row">
+									<div class="col-md-6 padding0 col-sm-6 col-xs-6" ng-repeat="data in Project track by $index">
+										<img ng-src="{{data}}" class="img-responsive">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 pt30 pb100">
+							<uib-accordion close-others="true" class="hidden-md hidden-lg" ng-if="projectDetail.id == 1">
+								<uib-accordion-group is-open="accordian[0].isFirstOpen">
+									<uib-accordion-heading class="project-info-title">
+										<h5 class="title-head">Design and Features</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[0].isFirstOpen, 'fa fa-plus': !accordian[0].isFirstOpen}"></i>
+									</uib-accordion-heading>
+									<div class="project-info">
+										<!-- <p class="padding0m">This magnificent commercial structure has a character of its own. It stands tall and strong, with a futuristic design that is progressive and liberal. The entire outer façade lends the building a stunning character.</p> -->
+										<ul class="padding0m">
+											<li ng-repeat="feature in designFeatures">{{feature}}</li>
+										</ul>
+									</div>
+								</uib-accordion-group>
+								<uib-accordion-group is-open="accordian[1].isFirstOpen">
+									<uib-accordion-heading class="project-info-title">
+										<h5 class="title-head">Technical specifications</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[1].isFirstOpen, 'fa fa-plus': !accordian[1].isFirstOpen}"></i>
+									</uib-accordion-heading>
+									<div class="project-info">
+										<ul class="padding0m">
+											<li ng-repeat="spec in specifications">{{spec}}</li>
+										</ul>
+									</div>
+								</uib-accordion-group>
+								<uib-accordion-group is-open="accordian[2].isFirstOpen">
+									<uib-accordion-heading class="project-info-title">
+										<h5 class="title-head">key distances</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[2].isFirstOpen, 'fa fa-plus': !accordian[2].isFirstOpen}"></i>
+									</uib-accordion-heading>
+									<div class="project-info">
+										<ul class="padding0m">
+											<li ng-repeat="key in keyDistances">{{key}}</li>
+										</ul>
+									</div>
+								</uib-accordion-group>
+							</uib-accordion>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg-white">
+				<div class="container pt50">
+					<div class="text-center">
+						<h1 class="font-weight300 f25m">GET IN TOUCH</h1>
+					</div>
+					<div class="row pt30">
+						<div class="col-md-offset-2 col-md-8">
+							<div class="row">
+								<form ng-submit="contactsubmit(formData);">
+									<div class="col-md-6">
 
-                             <uib-accordion close-others="true" class="hidden-md hidden-lg" ng-if="projectDetail.id == 5">
-                            <uib-accordion-group is-open="accordian[0].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">Design and Features</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[0].isFirstOpen, 'fa fa-plus': !accordian[0].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                      <p class="padding0m">A project that is balanced with quality construction on one side and classy interiors on the other with a prime location and great connectivity.</p> 
-                                    <!--<ul class="padding0m">
-                                        <li>The Double Façade substantially reduces the energy consumption of the building.</li>
-                                        <li>Under EDGE Certification process from US GBC.</li>
-                                        <li>The building promotes an integrated environment which is conducive for businesses to collaborate.</li>
-                                        <li>The architecture is sustainable and eco-friendly.</li>
-                                        <li>A provision for handicapped washrooms on each floor.</li>
-                                        <li>A state-of-the-art reception – complete with a visitor management system.</li>
-                                        <li>A cafeteria within the premise – Bespoke.</li>
-                                        <li>Orientation of the floor plate ensures ample day light in the offices thereby creating a lively environment on the floor.
-                                        </li>
-                                        <li>Dedicated signage space available outside the building.</li>
-                                    </ul>-->
-                                </div>
-                            </uib-accordion-group>
-                            <uib-accordion-group is-open="accordian[1].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">Technical specifications</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[1].isFirstOpen, 'fa fa-plus': !accordian[1].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                    <ul class="padding0m">
-                                     
-                                        <li>Smartly planned business spaces.</li>
-                                        <li>Appropriate for retail, banks, hospitals, automobiles ,F&B and all other sectors.</li>
-                                        <li>State-of-the-art infrastructure</li>
-                                        <li>Total area 19100 sq.ft.</li>
-                                        <li>3 Storey Independent Structure.</li>
-                                        <li>Ample Car and Two Wheeler parking at Ground Floor and around the building.</li>
-                                        <li>100% DG Back Up.</li>
-                                        <li>Packaged Air Conditioning.</li>
-                                  
-                                    </ul>
-                                </div>
-                            </uib-accordion-group>
-                            <uib-accordion-group is-open="accordian[2].isFirstOpen">
-                                <uib-accordion-heading class="project-info-title">
-                                    <h5 class="title-head">key distances</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[2].isFirstOpen, 'fa fa-plus': !accordian[2].isFirstOpen}"></i>
-                                </uib-accordion-heading>
-                                <div class="project-info">
-                                    <ul class="padding0m">
-                                    
-                                        <li>Situated on Law College Road, Muttha Symphony is located at a prime location.</li>
-                                        <li>It is well connected by all public transport systems.</li>
-                                        <li>Major amenities such as shopping malls, multiplex cinemas, schools and hospitals are in close proximity.</li>
-                                        <li>Amidst the educational hub which comprise of Symbiosis International Universtiy, Film Institute and Law College of Pune.</li>
-                                   
-                                    </ul>
-                                </div>
-                            </uib-accordion-group>
-                        </uib-accordion>
-                        <div class="hidden-xs hidden-sm" ng-if="projectDetail.id == 1">
-                            <div class="project-info-title pt30">
-                                <h5>Design and Features</h5>
-                                <div class="project-info">
-                                    <!-- <p>This magnificent commercial structure has a character of its own. It stands tall and strong, with a futuristic design that is progressive and liberal. The entire outer façade lends the building a stunning character.</p> -->
-                                    <ul>
-                                        <li>The Double Façade substantially reduces the energy consumption of the building.</li>
-                                        <li>Under EDGE Certification process from US GBC.</li>
-                                        <li>The building promotes an integrated environment which is conducive for businesses to collaborate.</li>
-                                        <li>The architecture is sustainable and eco-friendly.</li>
-                                        <li>A provision for handicapped washrooms on each floor.</li>
-                                        <li>A state of the art reception – complete with a visitor management system.</li>
-                                        <li>A cafeteria within the premise – Bespoke.</li>
-                                        <li>Orientation of the floor plate ensures ample day light in the offices thereby creating a lively environment on the floor.
-                                        </li>
-                                        <li>Dedicated signage space available outside the building.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="project-info-title pt30">
-                                <h5>Technical Specifications</h5>
-                                <div class="project-info">
-                                    <ul>
-                                        <li>100% Laminated Glass windows.</li>
-                                        <li>Extensive surveillance system on all common areas.</li>
-                                        <li>High speed dedicated internet connectivity.</li>
-                                        <li>Advanced Fire Protection system.</li>
-                                        <li>Reprographics on each floor.</li>
-                                        <li>Dedicated hospitality & facility management team.</li>
-                                        <li>High end and ergonomically proven furniture.</li>
-                                        <li>European Tile finishes in common areas and toilets.</li>
-                                        <li>High Tech communication systems for conferencing.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="project-info-title pt30">
-                                <h5>Key distances:</h5>
-                                <div class="project-info">
-                                    <ul>
-                                        <li>30 minute drive to the Airport.</li>
-                                        <li>10 minute drive to the railway station.</li>
-                                        <li>Senapati Bapat Road is one of the main commercial centers of Pune.</li>
-                                        <li>It houses some of the most reputed business establishments from around the world like Cognizant, HOV and trade centers like MCCI and American business corner so on.</li>
-                                        <li>It is the prime location for various businesses and acts as a HUB to various businesses from Auto to IT to Medical etc.</li>
-                                        <li>Next to JW Marriott.</li>
-                                        <li>Next to Mymall shopping centre.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hidden-xs hidden-sm" ng-if="projectDetail.id == 2">
-                            <div class="project-info-title pt30">
-                                <h5>Design and Features</h5>
-                                <div class="project-info">
-                                    <p>The high quality design and finishing showcases an impressive enterance and lift lobbies. A combination of Alucobond panels and an attractive glass façade gives the entire business park a grand look.</p>
-                                    <!-- <ul>
-                                        <li>The Double Façade substantially reduces the energy consumption of the building.</li>
-                                        <li>Under EDGE Certification process from US GBC.</li>
-                                        <li>The building promotes an integrated environment which is conducive for businesses to collaborate.</li>
-                                        <li>The architecture is sustainable and eco-friendly.</li>
-                                        <li>A provision for handicapped washrooms on each floor.</li>
-                                        <li>A state of the art reception – complete with a visitor management system.</li>
-                                        <li>A cafeteria within the premise – Bespoke.</li>
-                                        <li>Orientation of the floor plate ensures ample day light in the offices thereby creating a lively environment on the floor.
-                                        </li>
-                                        <li>Dedicated signage space available outside the building.</li>
-                                    </ul> -->
-                                </div>
-                            </div>
-                            <div class="project-info-title pt30">
-                                <h5>Technical Specifications</h5>
-                                <div class="project-info">
-                                    <ul>
-                                        <li>Extensive surveillance systems in all common areas.</li>
-                                        <li>Fire Protection system.</li>
-                                        <li>Dedicated facility management team.</li>
-                                        <li>100% DG BackUp Ample Car / Two Wheeler Parks.</li>
-                                        <li>Packaged Air Conditioning.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="project-info-title pt30">
-                                <h5>Key distances:</h5>
-                                <div class="project-info">
-                                    <ul>
-                                        <li>Muttha Chambers II is situated on Senapati Bapat Road which is one of the main commercial centers of Pune.</li>
-                                        <li>The Airport is a 30 minute drive away.</li>
-                                        <li>The Railway Station is a 10 minute drive away.</li>
-                                        <li>Located inclose proximity to JW Mariott and Mymall shopping centre.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hidden-xs hidden-sm" ng-if="projectDetail.id == 3">
-                            <div class="project-info-title pt30">
-                                <h5>Design and Features</h5>
-                                <div class="project-info">
-                                    <p>This magnificent commercial structure has a character of its own. It stands tall and strong, with a futuristic design that is progressive and liberal. The entire outer façade lends the building a stunning character.</p>
-                                    <ul>
-                                        <li>The Double Façade substantially reduces the energy consumption of the building.</li>
-                                        <li>Under EDGE Certification process from US GBC.</li>
-                                        <li>The building promotes an integrated environment which is conducive for businesses to collaborate.</li>
-                                        <li>The architecture is sustainable and eco-friendly.</li>
-                                        <li>A provision for handicapped washrooms on each floor.</li>
-                                        <li>A state of the art reception – complete with a visitor management system.</li>
-                                        <li>A cafeteria within the premise – Bespoke.</li>
-                                        <li>Orientation of the floor plate ensures ample day light in the offices thereby creating a lively environment on the floor.
-                                        </li>
-                                        <li>Dedicated signage space available outside the building.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="project-info-title pt30">
-                                <h5>Technical Specifications</h5>
-                                <div class="project-info">
-                                    <ul>
-                                        <li>100% Laminated Glass windows.</li>
-                                        <li>Extensive surveillance system on all common areas.</li>
-                                        <li>High speed dedicated internet connectivity.</li>
-                                        <li>Advanced Fire Protection system.</li>
-                                        <li>Reprographics on each floor.</li>
-                                        <li>Dedicated hospitality & facility management team.</li>
-                                        <li>High end and ergonomically proven furniture.</li>
-                                        <li>European Tile finishes in common areas and toilets.</li>
-                                        <li>High Tech communication systems for conferencing.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="project-info-title pt30">
-                                <h5>Key distances:</h5>
-                                <div class="project-info">
-                                    <ul>
-                                        <li>30 Minute drive to the airport.</li>
-                                        <li>10 minute drive to the railway station.</li>
-                                        <li>Senapati Bapat Road is one of the main commercial centers of Pune.</li>
-                                        <li>It houses some of the most reputed business establishments from around the world like Cognizant, HOV and trade centers like MCCI and American business corner so on.</li>
-                                        <li>It is the prime location for various businesses and acts as a HUB to various businesses from Auto to IT to Medical etc.</li>
-                                        <li>Next to JW Marriott.</li>
-                                        <li>Next to Mymall shopping centre.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hidden-xs hidden-sm" ng-if="projectDetail.id == 4">
-                            <div class="project-info-title pt30">
-                                <h5>Design and Features</h5>
-                                <div class="project-info">
-                                    <p>Muttha Towers is a private IT Park with up to 80% space available for IT/ITES establishments and up to 20% space available for commercial establishments.
-                                    </p>
-                                    <p>
-                                        Overall, the area provides for a complete and constructive work ambience. Muttha towers has conceptualized a work culture that goes beyond just business.
-                                    </p>
+										<div class="form-group getintouch">
+											<!-- <label for="exampleInputEmail1">Name</label> -->
+											<input type="text" class="form-control bg-input color-black" id="exampleInputEmail1" name="Name" placeholder="Name" ng-model="formData.name"
+												required aplha-only>
+										</div>
 
-                                </div>
-                            </div>
-                            <div class="project-info-title pt30">
-                                <h5>Technical Specifications</h5>
-                                <div class="project-info">
-                                    <ul>
-                                        <li>Data and voice connectivity by all major service providers.</li>
-                                        <li>Reliable power supply.</li>
-                                        <li>Large floor plates and column spaces.</li>
-                                        <li>Ample car parking space.</li>
-                                        <li>100% DG Backup.</li>
-                                        <li>Fire fighting system.</li>
-                                        <li>100% CCTV surveillance.</li>
-                                        <li>Packaged Air Conditioning.
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="project-info-title pt30">
-                                <h5>Key distances:</h5>
-                                <div class="project-info">
-                                    <ul>
-                                        <li>The Airport is less than 3 kilometers away.</li>
-                                        <li>The Railway Station is less than 6 kilometers.</li>
-                                        <li>Shopping malls like Phoenix and Inorbit are in close proximity. </li>
-                                        <li>Hotels like Hyatt Regency, Novotel, Hyatt, Four Points by Sheraton and many more are in close proximity.</li>
-                                        <li>Muttha Towers has a well established public and social infrastructure.</li>
-                                        <li>Muttha Towers is situated in the growth corridor of Pune which had an absorption of over 2.6 million sqft in 2014.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hidden-xs hidden-sm" ng-if="projectDetail.id == 5">
-                            <div class="project-info-title pt30">
-                                <h5>Design and Features</h5>
-                                <div class="project-info">
-                                    <p>A project that is balanced with quality construction on one side and classy interiors on the other with a prime location and great connectivity.</p>
-                                    <!-- <ul>
-                                        <li>The Double Façade substantially reduces the energy consumption of the building.</li>
-                                        <li>Under EDGE Certification process from US GBC.</li>
-                                        <li>The building promotes an integrated environment which is conducive for businesses to collaborate.</li>
-                                        <li>The architecture is sustainable and eco-friendly.</li>
-                                        <li>A provision for handicapped washrooms on each floor.</li>
-                                        <li>A state of the art reception – complete with a visitor management system.</li>
-                                        <li>A cafeteria within the premise – Bespoke.</li>
-                                        <li>Orientation of the floor plate ensures ample day light in the offices thereby creating a lively environment on the floor.
-                                        </li>
-                                        <li>Dedicated signage space available outside the building.</li>
-                                    </ul> -->
-                                </div>
-                            </div>
-                            <div class="project-info-title pt30">
-                                <h5>Technical Specifications</h5>
-                                <div class="project-info">
-                                    <ul>
-                                        <li>Smartly planned business spaces.</li>
-                                        <li>Appropriate for retail, banks, hospitals, automobiles ,F&B and all other sectors.</li>
-                                        <li>State-of-the-art infrastructure</li>
-                                        <li>Total area 19100 sq.ft.</li>
-                                        <li>3 Storey Independent Structure.</li>
-                                        <li>Ample Car and Two Wheeler parking at Ground Floor and around the building.</li>
-                                        <li>100% DG Back Up.</li>
-                                        <li>Packaged Air Conditioning.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="project-info-title pt30">
-                                <h5>Key distances:</h5>
-                                <div class="project-info">
-                                    <ul>
-                                        <li>Situated on Law College Road, Muttha Symphony is located at a prime location.</li>
-                                        <li>It is well connected by all public transport systems.</li>
-                                        <li>Major amenities such as shopping malls, multiplex cinemas, schools and hospitals are in close proximity.</li>
-                                        <li>Amidst the educational hub which comprise of Symbiosis International Universtiy, Film Institute and Law College of Pune.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                            <!--<div class="hidden-xs hidden-sm" ng-if="projectDetail.id == 6">
-                                <div class="row">
-                                    <div class="col-md-4 padding0">
-<img src="img/project/c1.jpg" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="col-md-4 padding0">
-<img src="img/project/c1.jpg" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="col-md-4 padding0">
-<img src="img/project/c1.jpg" class="img-responsive" alt="">
-                                    </div>
-                                </div>
-                        
-                        </div>-->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bg-white">
-            <div class="container pt50">
-                <div class="text-center">
-                    <h1 class="font-weight300 f25m">GET IN TOUCH</h1>
-                </div>
-                <div class="row pt30">
-                    <div class="col-md-offset-2 col-md-8">
-                        <div class="row">
-                            <form ng-submit="contactsubmit(formData);">
-                                <div class="col-md-6">
+									</div>
+									<div class="col-md-6">
 
-                                    <div class="form-group getintouch">
-                                        <!-- <label for="exampleInputEmail1">Name</label> -->
-                                        <input type="text" class="form-control bg-input color-black" id="exampleInputEmail1" name="Name" placeholder="Name"  ng-model="formData.name" required aplha-only>
-                                    </div>
-
-                                </div>
-                                <div class="col-md-6">
-
-                                    <div class="form-group getintouch">
-                                        <!-- <label for="exampleInputEmail1">Email</label> -->
-                                        <input type="email" class="form-control bg-input color-black" id="exampleInputEmail1" name="Email" placeholder="Email" ng-model="formData.email" required>
-                                    </div>
-                                </div>
-                                 <div class="row pb30">
-                            <div class="col-md-12">
-                                <div class="form-group getintouch">
-                                    <!-- <label for="exampleInputEmail1">Enquiry</label> -->
-                                    <input type="Enquiry" class="form-control bg-input color-black" id="exampleInputEmail1" name="Enquiry" placeholder="Enquiry"  ng-model="formData.enquiry" required>
-                                </div>
-                                  <div class="submit-btn float-right">
-                                  <button type="submit" class="btn-submit" name="button" >
+										<div class="form-group getintouch">
+											<!-- <label for="exampleInputEmail1">Email</label> -->
+											<input type="email" class="form-control bg-input color-black" id="exampleInputEmail1" name="Email" placeholder="Email" ng-model="formData.email"
+												required>
+										</div>
+									</div>
+									<div class="row pb30">
+										<div class="col-md-12">
+											<div class="form-group getintouch">
+												<!-- <label for="exampleInputEmail1">Enquiry</label> -->
+												<input type="Enquiry" class="form-control bg-input color-black" id="exampleInputEmail1" name="Enquiry" placeholder="Enquiry"
+													ng-model="formData.enquiry" required>
+											</div>
+											<div class="submit-btn float-right">
+												<button type="submit" class="btn-submit" name="button">
                                   Submit
                                      
                                       </button>
-                                  </div>
-                            </div>
-                        </div>
-                            </form>
-                        </div>
-                       
-                    </div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
 
-                </div>
+						</div>
 
-            </div>
-        </div>
-    </div>
-    </section>
-<!--//section 6-->
-<section ng-if="paramId === '6'">
-<div class="slider">
-      <!--<div class="project-banners"  ng-style="{'background-image':'url({{s.s}})'}" auto-height></div>-->
-         <flex-slider flex-slide="s in mySlides track by $index">
-            <li>
+					</div>
 
-                <div class="project-banners" ng-style="{'background-image':'url({{s.s}})'}" auto-height></div>
-                <!--<h2>{{noti.title}}</h2>-->
-            </li>
-        </flex-slider> 
-       
-    </div>
-   <div class="grey-bg">
-        <div class="container">
-       <div class="project-desc">
-                <div class="text-center">
-                    <h1 class="font-didot f45">MUTTHA business centre</h1>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="project-desc text-center">
-                            <p class="font-weight300 mb5">
-                                <span class="font-weight600 ">Flexibility</span> is at the core of everything we do. </p>
-                            <p class="font-weight300 mb5">
-                              A Fully-furnished, well equipped office which helps you to get straight down to business is what we have to offer.</p>
-<p class="font-weight300 mb5">We look after the details so there’s more time to spend on what really matters.
-                            </p>
-                        </div>     
-                    </div>
-                </div>
-            </div>
-             <div class="back">
-                            <div class="row">
-                                <div class="col-md-4 padding0 col-sm-4 col-xs-4" >
-                                     <img src="img/buisness/map.jpg" class="img-responsive" alt="">
-                                 
-                                    <!--<img ng-src="{{data}}" class="img-responsive">-->
-                                </div>
-                                 <div class="col-md-4 padding0 col-sm-4 col-xs-4" >
-                                       <img src="img/buisness/logo.jpg" class="img-responsive" alt="">
-                                  
-                                    <!--<img ng-src="{{data}}" class="img-responsive">-->
-                                </div>
-                                 <div class="col-md-4 padding0 col-sm-4 col-xs-4" >
-                                       <img src="img/buisness/canteen.jpg" class="img-responsive" alt="">
-                                  
-                                    <!--<img ng-src="{{data}}" class="img-responsive">-->
-                                </div>
-                            </div>
-                             <div class="row">
-                                <div class="col-md-4 padding0 col-sm-4 col-xs-4" >
-                                   <img src="img/buisness/conference.jpg" class="img-responsive" alt="">
-                                    <!--<img ng-src="{{data}}" class="img-responsive">-->
-                                </div>
-                                 <div class="col-md-4 padding0 col-sm-4 col-xs-4" >
-                                     
-                                  <img src="img/buisness/rooms.jpg" class="img-responsive" alt="">
-                                    <!--<img ng-src="{{data}}" class="img-responsive">-->
-                                </div>
-                                 <div class="col-md-4 padding0 col-sm-4 col-xs-4" >
-                                   <img src="img/buisness/corridor.jpg" class="img-responsive" alt="">
-                                    <!--<img ng-src="{{data}}" class="img-responsive">-->
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                         </div>
-                          <div class="bg-white">
-            <div class="container pt50">
-                <div class="text-center">
-                    <h1 class="font-weight300 f25m">GET IN TOUCH</h1>
-                </div>
-               <div class="row pt30">
-                    <div class="col-md-offset-2 col-md-8">
-                        <div class="row">
-                            <form ng-submit="subscribe(formData);">
-                                <div class="col-md-6">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--//section 6-->
+	<section ng-if="paramId === '6'">
+		<div class="slider">
+			<!--<div class="project-banners"  ng-style="{'background-image':'url({{s.s}})'}" auto-height></div>-->
+			<flex-slider flex-slide="s in mySlides track by $index">
+				<li>
 
-                                    <div class="form-group getintouch">
-                                        <!-- <label for="exampleInputEmail1">Name</label> -->
-                                        <input type="text" class="form-control bg-input color-black" id="exampleInputEmail1" placeholder="Name"  ng-model="formData.name" required aplha-only>
-                                    </div>
+					<div class="project-banners" ng-style="{'background-image':'url({{s.s}})'}" auto-height></div>
+					<!--<h2>{{noti.title}}</h2>-->
+				</li>
+			</flex-slider>
 
-                                </div>
-                                <div class="col-md-6">
+		</div>
+		<div class="grey-bg">
+			<div class="container">
+				<div class="project-desc">
+					<div class="text-center">
+						<h1 class="font-didot f45">MUTTHA business centre</h1>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="project-desc text-center">
+								<p class="font-weight300 mb5">
+									<span class="font-weight600 ">Flexibility</span> is at the core of everything we do. </p>
+								<p class="font-weight300 mb5">
+									A Fully-furnished, well equipped office which helps you to get straight down to business is what we have to offer.</p>
+								<p class="font-weight300 mb5">We look after the details so there’s more time to spend on what really matters.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="back">
+					<div class="row">
+						<div class="col-md-4 padding0 col-sm-4 col-xs-4">
+							<img src="img/buisness/map.jpg" class="img-responsive" alt="">
 
-                                    <div class="form-group getintouch">
-                                        <!-- <label for="exampleInputEmail1">Email</label> -->
-                                        <input type="Email" class="form-control bg-input color-black" id="exampleInputEmail1" placeholder="Email" ng-model="formData.email" required ng-pattern="/^[a-z]+[@][a-z]+[.]+[a-z]*$/">
-                                    </div>
-                                </div>
-                                 <div class="row pb30">
-                            <div class="col-md-12">
-                                <div class="form-group getintouch">
-                                    <!-- <label for="exampleInputEmail1">Enquiry</label> -->
-                                    <input type="Enquiry" class="form-control bg-input color-black" id="exampleInputEmail1" placeholder="Enquiry"  ng-model="formData.enquiry" required>
-                                </div>
-                                  <div class="submit-btn float-right">
-                                  <button type="submit" class="btn-submit" name="button" >
+							<!--<img ng-src="{{data}}" class="img-responsive">-->
+						</div>
+						<div class="col-md-4 padding0 col-sm-4 col-xs-4">
+							<img src="img/buisness/logo.jpg" class="img-responsive" alt="">
+
+							<!--<img ng-src="{{data}}" class="img-responsive">-->
+						</div>
+						<div class="col-md-4 padding0 col-sm-4 col-xs-4">
+							<img src="img/buisness/canteen.jpg" class="img-responsive" alt="">
+
+							<!--<img ng-src="{{data}}" class="img-responsive">-->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 padding0 col-sm-4 col-xs-4">
+							<img src="img/buisness/conference.jpg" class="img-responsive" alt="">
+							<!--<img ng-src="{{data}}" class="img-responsive">-->
+						</div>
+						<div class="col-md-4 padding0 col-sm-4 col-xs-4">
+
+							<img src="img/buisness/rooms.jpg" class="img-responsive" alt="">
+							<!--<img ng-src="{{data}}" class="img-responsive">-->
+						</div>
+						<div class="col-md-4 padding0 col-sm-4 col-xs-4">
+							<img src="img/buisness/corridor.jpg" class="img-responsive" alt="">
+							<!--<img ng-src="{{data}}" class="img-responsive">-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bg-white">
+			<div class="container pt50">
+				<div class="text-center">
+					<h1 class="font-weight300 f25m">GET IN TOUCH</h1>
+				</div>
+				<div class="row pt30">
+					<div class="col-md-offset-2 col-md-8">
+						<div class="row">
+							<form ng-submit="subscribe(formData);">
+								<div class="col-md-6">
+
+									<div class="form-group getintouch">
+										<!-- <label for="exampleInputEmail1">Name</label> -->
+										<input type="text" class="form-control bg-input color-black" id="exampleInputEmail1" placeholder="Name" ng-model="formData.name"
+											required aplha-only>
+									</div>
+
+								</div>
+								<div class="col-md-6">
+
+									<div class="form-group getintouch">
+										<!-- <label for="exampleInputEmail1">Email</label> -->
+										<input type="Email" class="form-control bg-input color-black" id="exampleInputEmail1" placeholder="Email" ng-model="formData.email"
+											required ng-pattern="/^[a-z]+[@][a-z]+[.]+[a-z]*$/">
+									</div>
+								</div>
+								<div class="row pb30">
+									<div class="col-md-12">
+										<div class="form-group getintouch">
+											<!-- <label for="exampleInputEmail1">Enquiry</label> -->
+											<input type="Enquiry" class="form-control bg-input color-black" id="exampleInputEmail1" placeholder="Enquiry" ng-model="formData.enquiry"
+												required>
+										</div>
+										<div class="submit-btn float-right">
+											<button type="submit" class="btn-submit" name="button">
                                   Submit
                                      
                                       </button>
-                                  </div>
-                            </div>
-                        </div>
-                            </form>
-                        </div>
-                       
-                    </div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
 
-                </div>
+					</div>
 
-            </div>
-        </div>                  
-        </div>
-      
-  
-    </section>
-<!--//section6-->
+				</div>
+
+			</div>
+		</div>
+		</div>
+
+
+	</section>
+	<!--//section6-->
 </section>
