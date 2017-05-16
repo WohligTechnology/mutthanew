@@ -22,6 +22,15 @@
         "view": true,
         "size": "220px X 65px"
     }, {
+        "name": "Mobile Banner",
+        "type": "image",
+        "tableRef": "mobilebanner",
+        "id": "mobbanner",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "view": true,
+        "size": "220px X 65px"
+    }, {
         "name": "Overview",
         "type": "textarea",
         "tableRef": "overview",

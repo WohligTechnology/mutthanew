@@ -11,6 +11,16 @@ var schema = new Schema({
         required: true,
         default: ""
     },
+    banner: {
+        type: String,
+        default: "",
+        required: true
+    },
+    mobilebanner: {
+        type: String,
+        default: "",
+        required: true
+    },
     management: [{
         name: String,
         image: String,

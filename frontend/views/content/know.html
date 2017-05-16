@@ -46,12 +46,14 @@
   <div class="container-fluid">
     <div class="row o-hidden">
       <div class="col-md-6 col-sm-12 col-xs-12 padding0">
-        <div class="banner know-banners hidden-xs" auto-height>
+        <div class="banner hidden-xs" auto-height>
+          <img ng-src="{{know.banner | serverimage}}">
           <div class="head-font head-sz">
             <h1 class="text-center">{{know.title}}</h1>
           </div>
         </div>
-        <div class="banner back-banners visible-xs" style="height: 250px;">
+        <div class="banner visible-xs" style="height: 250px;">
+          <img ng-src="{{know.mobilebanner | serverimage}}">
           <div class="head-font head-sz">
             <h1 class="text-center">{{know.title}}</h1>
           </div>
