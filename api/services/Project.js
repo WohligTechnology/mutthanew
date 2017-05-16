@@ -7,6 +7,10 @@ var schema = new Schema({
         type: String,
         default: ""
     },
+    mobilebanner: {
+        type: String,
+        default: ""
+    },
     bannerlogo: {
         type: String,
         default: ""

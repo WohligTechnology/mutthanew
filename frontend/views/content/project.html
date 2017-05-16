@@ -8,15 +8,7 @@
                 <h2>{{noti.title}}</h2>
             </li>
         </flex-slider> -->
-            <div class="project-banners" ng-if="projectDetail.id == 1" ng-style="{'background-image':'url({{projectDetail.image}})'}"
-                auto-height></div>
-            <div class="project-banners" ng-if="projectDetail.id == 2" ng-style="{'background-image':'url({{projectDetail.image}})'}"
-                auto-height></div>
-            <div class="project-banners" ng-if="projectDetail.id == 3" ng-style="{'background-image':'url({{projectDetail.image}})'}"
-                auto-height></div>
-            <div class="project-banners" ng-if="projectDetail.id == 4" ng-style="{'background-image':'url({{projectDetail.image}})'}"
-                auto-height></div>
-            <div class="project-banners" ng-if="projectDetail.id == 5" ng-style="{'background-image':'url({{projectDetail.image}})'}"
+            <div class="project-banners" ng-if="projectDetail.id == 1" ng-style="{'background-image':'url({{project.mobilebanner | serverimage}})'}"
                 auto-height></div>
             <!--<div class="project-banners" ng-if="projectDetail.id == 6" ng-style="{'background-image':'url({{projectDetail.image}})'}" auto-height></div>-->
             <!-- <img ng-src="{{projectDetail.image}}" class="img-responsive"> -->
