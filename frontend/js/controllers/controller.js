@@ -209,8 +209,9 @@ myApp.controller('HomeCtrl', function ($scope, $timeout, TemplateService, Naviga
         $scope.navigation = NavigationService.getnav();
         $scope.validEmail = /^[a-z]+[@][a-z]+[.]+[a-z]*$/;
 
-        ContentService.getOfficeDetails(function (data) {
-            $scope.officeDetails = data.data.data;
+        ContentService.getDetails(function (data) {
+            $scope.contact = data.data.data;
+            console.log("contact: ", $scope.contact);
         });
 
         $scope.contactsubmit = function (formData) {

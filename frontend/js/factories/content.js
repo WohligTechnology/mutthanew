@@ -33,9 +33,9 @@ myApp.factory("ContentService", function ($http) {
             }).then(callback);
         },
 
-        getOfficeDetails: function (callback) {
+        getDetails: function (callback) {
             $http({
-                url: adminurl + 'OfficeDetails/getOfficeDetails',
+                url: adminurl + 'OfficeDetails/getDetails',
                 method: 'POST',
                 withCredentials: false
             }).then(callback);
@@ -46,6 +46,15 @@ myApp.factory("ContentService", function ($http) {
                 url: adminurl + 'Project/getOne',
                 method: 'POST',
                 data: projectId,
+                withCredentials: false
+            }).then(callback);
+        },
+
+        getEnabledBannerByPage: function (page, callback) {
+            $http({
+                url: adminurl + 'Banner/getEnabledBannerByPage',
+                method: 'POST',
+                data: page,
                 withCredentials: false
             }).then(callback);
         }

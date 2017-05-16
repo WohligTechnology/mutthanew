@@ -24,12 +24,30 @@ module.exports = mongoose.model('OfficeDetails', schema);
 
 var exports = _.cloneDeep(require("sails-wohlig-service")(schema));
 var model = {
-    getOfficeDetails: function (callback) {
+    getDetails: function (callback) {
         OfficeDetails.findOne({}).exec(function (err, data) {
             if (err) {
                 callback(err, null);
             } else if (data) {
-                callback(null, data);
+                Banner.getEnabledBannerByPage({
+                    name: 'contact'
+                }, function (err, banner) {
+                    if (err) {
+                        callback(err, null);
+                    } else if (banner) {
+                        var details = {
+                            officeDetails: data,
+                            banner: banner
+                        }
+                        callback(null, details);
+                    } else {
+                        callback({
+                            message: {
+                                data: "Invalid credentials!"
+                            }
+                        }, null);
+                    }
+                });
             } else {
                 callback({
                     message: {
