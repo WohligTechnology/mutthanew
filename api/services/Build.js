@@ -13,6 +13,11 @@ var schema = new Schema({
     type: String,
     default: "",
     required: true
+  },
+  mobilebanner: {
+    type: String,
+    default: "",
+    required: true
   }
 });
 
