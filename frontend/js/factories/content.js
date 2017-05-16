@@ -1,5 +1,13 @@
 myApp.factory("ContentService", function ($http) {
     return {
+        getHomeSliders: function (callback) {
+            $http({
+                url: adminurl + 'HomeSlider/getAllEnabled',
+                method: 'POST',
+                withCredentials: false
+            }).then(callback);
+        },
+
         getBuild: function (callback) {
             $http({
                 url: adminurl + 'Build/getAll',
