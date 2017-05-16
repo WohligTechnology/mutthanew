@@ -1,32 +1,32 @@
 <section>
   <div class="home-section hidden-xs">
-    <div class="banner" >
-      <flex-slider flex-slide="s in mySlides track by $index" prev-text="" next-text="" slideshow="true">
-          <li auto-height>
-              <img ng-src="{{s}}" class="img-responsive" auto-heightfixed>
-          </li>
+    <div class="banner">
+      <flex-slider flex-slide="image in slides track by $index" prev-text="" next-text="" slideshow="true">
+        <li auto-height>
+          <img ng-src="{{image.mobile | serverimage}}" class="img-responsive" auto-heightfixed>
+        </li>
       </flex-slider>
-        <div class="text-center up-side">
-          <div class="bkp-img">
-            <h2><span class="color-white display-inline"><a ui-sref="know">KNOW</a> </span> <a ui-sref="build">BUILD</a> <a ui-sref="give">GIVE</a></h2>
-          </div>
+      <div class="text-center up-side">
+        <div class="bkp-img">
+          <h2><span class="color-white display-inline"><a ui-sref="know">KNOW</a> </span> <a ui-sref="build">BUILD</a> <a ui-sref="give">GIVE</a></h2>
+        </div>
 
-            </div>
+      </div>
     </div>
   </div>
   <div class="home-section hidden-md hiddem-sm visible-xs">
-    <div class="banner" >
-      <flex-slider flex-slide="s in mySlidess track by $index" prev-text="" next-text="" slideshow="true">
-          <li auto-height>
-              <img ng-src="{{s}}" class="img-responsive" auto-heightfixed>
-          </li>
+    <div class="banner">
+      <flex-slider flex-slide="image in slides track by $index" prev-text="" next-text="" slideshow="true">
+        <li auto-height>
+          <img ng-src="{{image.banner | serverimage}}" class="img-responsive" auto-heightfixed>
+        </li>
       </flex-slider>
-        <div class="text-center up-side">
-          <div class="bkp-img">
-            <h2><span class="color-white display-inline"><a ui-sref="know">KNOW</a> </span> <a ui-sref="build">BUILD</a> <a ui-sref="give">GIVE</a></h2>
-          </div>
+      <div class="text-center up-side">
+        <div class="bkp-img">
+          <h2><span class="color-white display-inline"><a ui-sref="know">KNOW</a> </span> <a ui-sref="build">BUILD</a> <a ui-sref="give">GIVE</a></h2>
+        </div>
 
-            </div>
+      </div>
     </div>
   </div>
 

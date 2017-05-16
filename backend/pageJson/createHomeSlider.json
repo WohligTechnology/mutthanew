@@ -15,6 +15,15 @@
         "view": true,
         "size": "220px X 65px"
     }, {
+        "name": "Mobile banner",
+        "type": "image",
+        "tableRef": "mobile",
+        "id": "mobimg",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "view": true,
+        "size": "220px X 65px"
+    }, {
         "name": "Order",
         "type": "number",
         "tableRef": "order",

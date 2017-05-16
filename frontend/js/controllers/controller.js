@@ -1,4 +1,4 @@
-myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+myApp.controller('HomeCtrl', function ($scope, $timeout, TemplateService, NavigationService, ContentService) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("home");
         $scope.menutitle = NavigationService.makeactive("Home");
@@ -6,6 +6,11 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         $scope.navigation = NavigationService.getnav();
         TemplateService.header = "views/template/header.html";
         // TemplateService.header = "";
+
+        ContentService.getHomeSliders(function (data) {
+            $scope.slides = data.data.data;
+        });
+
         $scope.mySlides = [
             'img/home/1.jpg',
             'img/home/2.jpg',

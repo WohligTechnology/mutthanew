@@ -7,6 +7,14 @@ var schema = new Schema({
             name: "Image"
         }
     },
+    mobile: {
+        type: String,
+        required: true,
+        unique: true,
+        excel: {
+            name: "mobile"
+        }
+    },
     order: Number,
     status: {
         type: String,
@@ -24,6 +32,8 @@ var model = {
     getAllEnabled: function (callback) {
         HomeSlider.find({
             status: 'Enabled'
+        }).sort({
+            'order': 1
         }).exec(function (err, sliderImages) {
             if (err) {
                 callback(err, null);
