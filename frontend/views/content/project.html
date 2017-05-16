@@ -28,16 +28,7 @@
 		<!--//mobile ka background image//-->
 
 		<div class="slider hidden-md hidden-sm visible-xs">
-			<div class="project-banners" ng-if="projectDetail.id == 1" ng-style="{'background-image':'url({{projectDetail.mimage}})'}"
-				auto-height></div>
-			<div class="project-banners" ng-if="projectDetail.id == 2" ng-style="{'background-image':'url({{projectDetail.mimage}})'}"
-				auto-height></div>
-			<div class="project-banners" ng-if="projectDetail.id == 3" ng-style="{'background-image':'url({{projectDetail.mimage}})'}"
-				auto-height></div>
-			<div class="project-banners" ng-if="projectDetail.id == 4" ng-style="{'background-image':'url({{projectDetail.mimage}})'}"
-				auto-height></div>
-			<div class="project-banners" ng-if="projectDetail.id == 5" ng-style="{'background-image':'url({{projectDetail.mimage}})'}"
-				auto-height></div>
+			<div class="project-banners" ng-style="{'background-image':'url({{project.banner | serverimage })'}" auto-height></div>
 		</div>
 
 		<!--//mobile ka background image//-->
