@@ -29,10 +29,27 @@ var model = {
             status: 'Enabled'
         }).exec(function (err, found) {
             if (err) {
-                console.log(err);
                 callback(err, null);
             } else if (found && found.length > 0) {
-                callback(null, found);
+                Banner.getEnabledBannerByPage({
+                    name: 'client'
+                }, function (err, banner) {
+                    if (err) {
+                        callback(err, null);
+                    } else if (banner) {
+                        var details = {
+                            client: found,
+                            banner: banner
+                        }
+                        callback(null, details);
+                    } else {
+                        callback({
+                            message: {
+                                data: "Invalid credentials!"
+                            }
+                        }, null);
+                    }
+                });
             } else {
                 callback(null, []);
             }

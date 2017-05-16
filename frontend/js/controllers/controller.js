@@ -316,7 +316,8 @@ myApp.controller('HomeCtrl', function ($scope, $timeout, TemplateService, Naviga
         $scope.navigation = NavigationService.getnav();
 
         ContentService.getEnabledClients(function (data) {
-            $scope.clients = _.chunk(data.data.data, 2);
+            $scope.clients = _.chunk(data.data.data.clients, 2);
+            $scope.banner = data.data.data.banner;
         });
     })
     .controller('ProjectCtrl', function ($scope, $state, $timeout, $stateParams, $uibModal, TemplateService, NavigationService, ContentService) {
