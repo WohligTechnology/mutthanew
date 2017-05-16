@@ -1,276 +1,277 @@
 <section>
-	<section ng-if="paramId!='6'">
-		<div class="slider hidden-xs">
-			<!-- <flex-slider flex-slide="s in mySlides track by $index">
+    <section ng-if="paramId!='6'">
+        <div class="slider hidden-xs">
+            <!-- <flex-slider flex-slide="s in mySlides track by $index">
             <li>
 
                 <div class="project-banners" ng-style="{'background-image':'url({{s}})'}" auto-height></div>
                 <h2>{{noti.title}}</h2>
             </li>
         </flex-slider> -->
-			<div class="project-banners" ng-if="projectDetail.id == 1" ng-style="{'background-image':'url({{projectDetail.image}})'}"
-				auto-height></div>
-			<div class="project-banners" ng-if="projectDetail.id == 2" ng-style="{'background-image':'url({{projectDetail.image}})'}"
-				auto-height></div>
-			<div class="project-banners" ng-if="projectDetail.id == 3" ng-style="{'background-image':'url({{projectDetail.image}})'}"
-				auto-height></div>
-			<div class="project-banners" ng-if="projectDetail.id == 4" ng-style="{'background-image':'url({{projectDetail.image}})'}"
-				auto-height></div>
-			<div class="project-banners" ng-if="projectDetail.id == 5" ng-style="{'background-image':'url({{projectDetail.image}})'}"
-				auto-height></div>
-			<!--<div class="project-banners" ng-if="projectDetail.id == 6" ng-style="{'background-image':'url({{projectDetail.image}})'}" auto-height></div>-->
-			<!-- <img ng-src="{{projectDetail.image}}" class="img-responsive"> -->
-			<!-- <div class="project-main tex-center">
+            <div class="project-banners" ng-if="projectDetail.id == 1" ng-style="{'background-image':'url({{projectDetail.image}})'}"
+                auto-height></div>
+            <div class="project-banners" ng-if="projectDetail.id == 2" ng-style="{'background-image':'url({{projectDetail.image}})'}"
+                auto-height></div>
+            <div class="project-banners" ng-if="projectDetail.id == 3" ng-style="{'background-image':'url({{projectDetail.image}})'}"
+                auto-height></div>
+            <div class="project-banners" ng-if="projectDetail.id == 4" ng-style="{'background-image':'url({{projectDetail.image}})'}"
+                auto-height></div>
+            <div class="project-banners" ng-if="projectDetail.id == 5" ng-style="{'background-image':'url({{projectDetail.image}})'}"
+                auto-height></div>
+            <!--<div class="project-banners" ng-if="projectDetail.id == 6" ng-style="{'background-image':'url({{projectDetail.image}})'}" auto-height></div>-->
+            <!-- <img ng-src="{{projectDetail.image}}" class="img-responsive"> -->
+            <!-- <div class="project-main tex-center">
             <img ng-src="{{projectDetail.img}}">
         </div> -->
-		</div>
+        </div>
 
-		<!--//mobile ka background image//-->
+        <!--//mobile ka background image//-->
 
-		<div class="slider hidden-md hidden-sm visible-xs">
-			<div class="project-banners" ng-style="{'background-image':'url({{project.banner | serverimage })'}" auto-height></div>
-		</div>
+        <div class="slider hidden-md hidden-sm visible-xs">
+            <div class="project-banners" ng-style="{'background-image':'url({{project.banner | serverimage })'}" auto-height></div>
+        </div>
 
-		<!--//mobile ka background image//-->
-		<div class="grey-bg">
-			<div class="container">
-				<div class="project-desc">
-					<div class="text-center">
-						<h1 class="font-didot f45">{{project.name}}</h1>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="project-desc" ng-if="projectDetail.id == 1">
-								<p class="font-weight300">
-									{{project.description}}
-								</p>
-							</div>
-						</div>
-					</div>
+        <!--//mobile ka background image//-->
+        <div class="grey-bg">
+            <div class="container">
+                <div class="project-desc">
+                    <div class="text-center">
+                        <h1 class="font-didot f45">{{project.name}}</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="project-desc" ng-if="projectDetail.id == 1">
+                                <p class="font-weight300">
+                                    {{project.description}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-				</div>
-				<div class="mt60">
-					<div class="row">
-						<div class="col-md-6 ">
-							<div class="back-box">
-								<div class="row">
-									<div class="col-md-6 padding0 col-sm-6 col-xs-6" ng-repeat="image in images track by $index">
-										<img ng-src="{{image | serverimage}}" class="img-responsive">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 pt30 pb100">
-							<uib-accordion close-others="true" class="hidden-md hidden-lg" ng-if="projectDetail.id == 1">
-								<uib-accordion-group is-open="accordian[0].isFirstOpen">
-									<uib-accordion-heading class="project-info-title">
-										<h5 class="title-head">Design and Features</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[0].isFirstOpen, 'fa fa-plus': !accordian[0].isFirstOpen}"></i>
-									</uib-accordion-heading>
-									<div class="project-info">
-										<!-- <p class="padding0m">This magnificent commercial structure has a character of its own. It stands tall and strong, with a futuristic design that is progressive and liberal. The entire outer façade lends the building a stunning character.</p> -->
-										<ul class="padding0m">
-											<li ng-repeat="feature in designFeatures">{{feature}}</li>
-										</ul>
-									</div>
-								</uib-accordion-group>
-								<uib-accordion-group is-open="accordian[1].isFirstOpen">
-									<uib-accordion-heading class="project-info-title">
-										<h5 class="title-head">Technical specifications</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[1].isFirstOpen, 'fa fa-plus': !accordian[1].isFirstOpen}"></i>
-									</uib-accordion-heading>
-									<div class="project-info">
-										<ul class="padding0m">
-											<li ng-repeat="spec in specifications">{{spec}}</li>
-										</ul>
-									</div>
-								</uib-accordion-group>
-								<uib-accordion-group is-open="accordian[2].isFirstOpen">
-									<uib-accordion-heading class="project-info-title">
-										<h5 class="title-head">key distances</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[2].isFirstOpen, 'fa fa-plus': !accordian[2].isFirstOpen}"></i>
-									</uib-accordion-heading>
-									<div class="project-info">
-										<ul class="padding0m">
-											<li ng-repeat="key in keyDistances">{{key}}</li>
-										</ul>
-									</div>
-								</uib-accordion-group>
-							</uib-accordion>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="bg-white">
-				<div class="container pt50">
-					<div class="text-center">
-						<h1 class="font-weight300 f25m">GET IN TOUCH</h1>
-					</div>
-					<div class="row pt30">
-						<div class="col-md-offset-2 col-md-8">
-							<div class="row">
-								<form ng-submit="contactsubmit(formData);">
-									<div class="col-md-6">
+                </div>
+                <div class="mt60">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <div class="back-box">
+                                <div class="row">
+                                    <div class="col-md-6 padding0 col-sm-6 col-xs-6" ng-repeat="image in images track by $index">
+                                        <img ng-src="{{image | serverimage}}" class="img-responsive">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pt30 pb100">
+                            <uib-accordion close-others="true" class="hidden-md hidden-lg" ng-if="projectDetail.id == 1">
+                                <uib-accordion-group is-open="accordian[0].isFirstOpen">
+                                    <uib-accordion-heading class="project-info-title">
+                                        <h5 class="title-head">Design and Features</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[0].isFirstOpen, 'fa fa-plus': !accordian[0].isFirstOpen}"></i>
+                                    </uib-accordion-heading>
+                                    <div class="project-info">
+                                        <!-- <p class="padding0m">This magnificent commercial structure has a character of its own. It stands tall and strong, with a futuristic design that is progressive and liberal. The entire outer façade lends the building a stunning character.</p> -->
+                                        <ul class="padding0m">
+                                            <li ng-repeat="feature in designFeatures">{{feature}}</li>
+                                        </ul>
+                                    </div>
+                                </uib-accordion-group>
+                                <uib-accordion-group is-open="accordian[1].isFirstOpen">
+                                    <uib-accordion-heading class="project-info-title">
+                                        <h5 class="title-head">Technical specifications</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[1].isFirstOpen, 'fa fa-plus': !accordian[1].isFirstOpen}"></i>
+                                    </uib-accordion-heading>
+                                    <div class="project-info">
+                                        <ul class="padding0m">
+                                            <li ng-repeat="spec in specifications">{{spec}}</li>
+                                        </ul>
+                                    </div>
+                                </uib-accordion-group>
+                                <uib-accordion-group is-open="accordian[2].isFirstOpen">
+                                    <uib-accordion-heading class="project-info-title">
+                                        <h5 class="title-head">key distances</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[2].isFirstOpen, 'fa fa-plus': !accordian[2].isFirstOpen}"></i>
+                                    </uib-accordion-heading>
+                                    <div class="project-info">
+                                        <ul class="padding0m">
+                                            <li ng-repeat="key in keyDistances">{{key}}</li>
+                                        </ul>
+                                    </div>
+                                </uib-accordion-group>
+                            </uib-accordion>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white">
+                <div class="container pt50">
+                    <div class="text-center">
+                        <h1 class="font-weight300 f25m">GET IN TOUCH</h1>
+                    </div>
+                    <div class="row pt30">
+                        <div class="col-md-offset-2 col-md-8">
+                            <div class="row">
+                                <form ng-submit="contactsubmit(formData);" name="getInTouchForm">
+                                    <div class="col-md-6">
 
-										<div class="form-group getintouch">
-											<!-- <label for="exampleInputEmail1">Name</label> -->
-											<input type="text" class="form-control bg-input color-black" id="exampleInputEmail1" name="Name" placeholder="Name" ng-model="formData.name"
-												required aplha-only>
-										</div>
+                                        <div class="form-group getintouch">
+                                            <!-- <label for="exampleInputEmail1">Name</label> -->
+                                            <input type="text" class="form-control bg-input color-black" id="exampleInputEmail1" name="Name" placeholder="Name" ng-model="formData.name"
+                                                required aplha-only>
+                                        </div>
 
-									</div>
-									<div class="col-md-6">
+                                    </div>
+                                    <div class="col-md-6">
 
-										<div class="form-group getintouch">
-											<!-- <label for="exampleInputEmail1">Email</label> -->
-											<input type="email" class="form-control bg-input color-black" id="exampleInputEmail1" name="Email" placeholder="Email" ng-model="formData.email"
-												required>
-										</div>
-									</div>
-									<div class="row pb30">
-										<div class="col-md-12">
-											<div class="form-group getintouch">
-												<!-- <label for="exampleInputEmail1">Enquiry</label> -->
-												<input type="Enquiry" class="form-control bg-input color-black" id="exampleInputEmail1" name="Enquiry" placeholder="Enquiry"
-													ng-model="formData.enquiry" required>
-											</div>
-											<div class="submit-btn float-right">
-												<button type="submit" class="btn-submit" name="button">
+                                        <div class="form-group getintouch">
+                                            <!-- <label for="exampleInputEmail1">Email</label> -->
+                                            <input type="email" class="form-control bg-input color-black" id="exampleInputEmail1" name="Email" placeholder="Email" ng-model="formData.email"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="row pb30">
+                                        <div class="col-md-12">
+                                            <div class="form-group getintouch">
+                                                <!-- <label for="exampleInputEmail1">Enquiry</label> -->
+                                                <input type="text" class="form-control bg-input color-black" id="exampleInputEmail1" name="Enquiry" placeholder="Enquiry"
+                                                    ng-model="formData.enquiry" required>
+                                            </div>
+                                            <div class="submit-btn float-right">
+                                                <button type="submit" class="btn-submit" name="button" ng-click="getInTouchForm.$valid && contactsubmit(formData)">
                                   Submit
                                      
                                       </button>
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
 
-						</div>
+                        </div>
 
-					</div>
+                    </div>
 
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--//section 6-->
-	<section ng-if="paramId === '6'">
-		<div class="slider">
-			<!--<div class="project-banners"  ng-style="{'background-image':'url({{s.s}})'}" auto-height></div>-->
-			<flex-slider flex-slide="s in mySlides track by $index">
-				<li>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//section 6-->
+    <section ng-if="paramId === '6'">
+        <div class="slider">
+            <!--<div class="project-banners"  ng-style="{'background-image':'url({{s.s}})'}" auto-height></div>-->
+            <flex-slider flex-slide="s in mySlides track by $index">
+                <li>
 
-					<div class="project-banners" ng-style="{'background-image':'url({{s.s}})'}" auto-height></div>
-					<!--<h2>{{noti.title}}</h2>-->
-				</li>
-			</flex-slider>
+                    <div class="project-banners" ng-style="{'background-image':'url({{s.s}})'}" auto-height></div>
+                    <!--<h2>{{noti.title}}</h2>-->
+                </li>
+            </flex-slider>
 
-		</div>
-		<div class="grey-bg">
-			<div class="container">
-				<div class="project-desc">
-					<div class="text-center">
-						<h1 class="font-didot f45">MUTTHA business centre</h1>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="project-desc text-center">
-								<p class="font-weight300 mb5">
-									<span class="font-weight600 ">Flexibility</span> is at the core of everything we do. </p>
-								<p class="font-weight300 mb5">
-									A Fully-furnished, well equipped office which helps you to get straight down to business is what we have to offer.</p>
-								<p class="font-weight300 mb5">We look after the details so there’s more time to spend on what really matters.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="back">
-					<div class="row">
-						<div class="col-md-4 padding0 col-sm-4 col-xs-4">
-							<img src="img/buisness/map.jpg" class="img-responsive" alt="">
+        </div>
+        <div class="grey-bg">
+            <div class="container">
+                <div class="project-desc">
+                    <div class="text-center">
+                        <h1 class="font-didot f45">MUTTHA business centre</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="project-desc text-center">
+                                <p class="font-weight300 mb5">
+                                    <span class="font-weight600 ">Flexibility</span> is at the core of everything we do.
+                                </p>
+                                <p class="font-weight300 mb5">
+                                    A Fully-furnished, well equipped office which helps you to get straight down to business is what we have to offer.</p>
+                                <p class="font-weight300 mb5">We look after the details so there’s more time to spend on what really matters.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="row">
+                        <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                            <img src="img/buisness/map.jpg" class="img-responsive" alt="">
 
-							<!--<img ng-src="{{data}}" class="img-responsive">-->
-						</div>
-						<div class="col-md-4 padding0 col-sm-4 col-xs-4">
-							<img src="img/buisness/logo.jpg" class="img-responsive" alt="">
+                            <!--<img ng-src="{{data}}" class="img-responsive">-->
+                        </div>
+                        <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                            <img src="img/buisness/logo.jpg" class="img-responsive" alt="">
 
-							<!--<img ng-src="{{data}}" class="img-responsive">-->
-						</div>
-						<div class="col-md-4 padding0 col-sm-4 col-xs-4">
-							<img src="img/buisness/canteen.jpg" class="img-responsive" alt="">
+                            <!--<img ng-src="{{data}}" class="img-responsive">-->
+                        </div>
+                        <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                            <img src="img/buisness/canteen.jpg" class="img-responsive" alt="">
 
-							<!--<img ng-src="{{data}}" class="img-responsive">-->
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-4 padding0 col-sm-4 col-xs-4">
-							<img src="img/buisness/conference.jpg" class="img-responsive" alt="">
-							<!--<img ng-src="{{data}}" class="img-responsive">-->
-						</div>
-						<div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                            <!--<img ng-src="{{data}}" class="img-responsive">-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                            <img src="img/buisness/conference.jpg" class="img-responsive" alt="">
+                            <!--<img ng-src="{{data}}" class="img-responsive">-->
+                        </div>
+                        <div class="col-md-4 padding0 col-sm-4 col-xs-4">
 
-							<img src="img/buisness/rooms.jpg" class="img-responsive" alt="">
-							<!--<img ng-src="{{data}}" class="img-responsive">-->
-						</div>
-						<div class="col-md-4 padding0 col-sm-4 col-xs-4">
-							<img src="img/buisness/corridor.jpg" class="img-responsive" alt="">
-							<!--<img ng-src="{{data}}" class="img-responsive">-->
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="bg-white">
-			<div class="container pt50">
-				<div class="text-center">
-					<h1 class="font-weight300 f25m">GET IN TOUCH</h1>
-				</div>
-				<div class="row pt30">
-					<div class="col-md-offset-2 col-md-8">
-						<div class="row">
-							<form ng-submit="subscribe(formData);">
-								<div class="col-md-6">
+                            <img src="img/buisness/rooms.jpg" class="img-responsive" alt="">
+                            <!--<img ng-src="{{data}}" class="img-responsive">-->
+                        </div>
+                        <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                            <img src="img/buisness/corridor.jpg" class="img-responsive" alt="">
+                            <!--<img ng-src="{{data}}" class="img-responsive">-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white">
+            <div class="container pt50">
+                <div class="text-center">
+                    <h1 class="font-weight300 f25m">GET IN TOUCH</h1>
+                </div>
+                <div class="row pt30">
+                    <div class="col-md-offset-2 col-md-8">
+                        <div class="row">
+                            <form ng-submit="subscribe(formData);">
+                                <div class="col-md-6">
 
-									<div class="form-group getintouch">
-										<!-- <label for="exampleInputEmail1">Name</label> -->
-										<input type="text" class="form-control bg-input color-black" id="exampleInputEmail1" placeholder="Name" ng-model="formData.name"
-											required aplha-only>
-									</div>
+                                    <div class="form-group getintouch">
+                                        <!-- <label for="exampleInputEmail1">Name</label> -->
+                                        <input type="text" class="form-control bg-input color-black" id="exampleInputEmail1" placeholder="Name" ng-model="formData.name"
+                                            required aplha-only>
+                                    </div>
 
-								</div>
-								<div class="col-md-6">
+                                </div>
+                                <div class="col-md-6">
 
-									<div class="form-group getintouch">
-										<!-- <label for="exampleInputEmail1">Email</label> -->
-										<input type="Email" class="form-control bg-input color-black" id="exampleInputEmail1" placeholder="Email" ng-model="formData.email"
-											required ng-pattern="/^[a-z]+[@][a-z]+[.]+[a-z]*$/">
-									</div>
-								</div>
-								<div class="row pb30">
-									<div class="col-md-12">
-										<div class="form-group getintouch">
-											<!-- <label for="exampleInputEmail1">Enquiry</label> -->
-											<input type="Enquiry" class="form-control bg-input color-black" id="exampleInputEmail1" placeholder="Enquiry" ng-model="formData.enquiry"
-												required>
-										</div>
-										<div class="submit-btn float-right">
-											<button type="submit" class="btn-submit" name="button">
+                                    <div class="form-group getintouch">
+                                        <!-- <label for="exampleInputEmail1">Email</label> -->
+                                        <input type="Email" class="form-control bg-input color-black" id="exampleInputEmail1" placeholder="Email" ng-model="formData.email"
+                                            required ng-pattern="/^[a-z]+[@][a-z]+[.]+[a-z]*$/">
+                                    </div>
+                                </div>
+                                <div class="row pb30">
+                                    <div class="col-md-12">
+                                        <div class="form-group getintouch">
+                                            <!-- <label for="exampleInputEmail1">Enquiry</label> -->
+                                            <input type="Enquiry" class="form-control bg-input color-black" id="exampleInputEmail1" placeholder="Enquiry" ng-model="formData.enquiry"
+                                                required>
+                                        </div>
+                                        <div class="submit-btn float-right">
+                                            <button type="submit" class="btn-submit" name="button">
                                   Submit
                                      
                                       </button>
-										</div>
-									</div>
-								</div>
-							</form>
-						</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
 
-					</div>
+                    </div>
 
-				</div>
+                </div>
 
-			</div>
-		</div>
-		</div>
+            </div>
+        </div>
+        </div>
 
 
-	</section>
-	<!--//section6-->
+    </section>
+    <!--//section6-->
 </section>
