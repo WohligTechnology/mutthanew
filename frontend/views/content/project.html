@@ -54,8 +54,8 @@
 						<div class="col-md-6 ">
 							<div class="back-box">
 								<div class="row">
-									<div class="col-md-6 padding0 col-sm-6 col-xs-6" ng-repeat="data in Project track by $index">
-										<img ng-src="{{data}}" class="img-responsive">
+									<div class="col-md-6 padding0 col-sm-6 col-xs-6" ng-repeat="image in images track by $index">
+										<img ng-src="{{image | serverimage}}" class="img-responsive">
 									</div>
 								</div>
 							</div>

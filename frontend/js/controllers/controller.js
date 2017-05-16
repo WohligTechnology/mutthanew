@@ -339,6 +339,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
 
         $scope.contactsubmit = function (formData) {
             console.log("hi contact");
+            formData.project = $scope.project._id;
             NavigationService.ContactSave(formData, function (data) {
                 console.log("m in give", data);
                 if (data) {
@@ -369,135 +370,11 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             $scope.designFeatures = _.split($scope.project.designFeature, '\n');
             $scope.keyDistances = _.split($scope.project.keyDistance, '\n');
             $scope.specifications = _.split($scope.project.specification, '\n');
+            $scope.images = _.sortBy($scope.project.images, 'order');
         });
 
-        $scope.accordian = [];
-        $scope.accordian.push({
-            isFirstOpen: true,
-            isFirstDisabled: false
-        });
-        $scope.accordian.push({
-            isFirstOpen: true,
-            isFirstDisabled: false
-        });
-        $scope.accordian.push({
-            isFirstOpen: true,
-            isFirstDisabled: false
-        });
-
-        $scope.mySlides = [
-            'img/slider/s1.jpg',
-            'img/slider/s1.jpg',
-            'img/slider/s1.jpg',
-            'img/slider/s1.jpg'
-        ];
-
-        $scope.projectimages.Project1 = [
-            'img/a1.jpg',
-            'img/a2.jpg',
-            'img/a3.jpg',
-            'img/a4.jpg',
-            'img/a5.jpg',
-            'img/a6.jpg'
-        ];
-        $scope.projectimages.Project2 = [
-            'img/project/b1.jpg',
-            'img/project/b2.jpg',
-            'img/project/b3.jpg',
-            'img/project/b4.jpg',
-            'img/project/b5.jpg',
-            'img/project/b6.jpg'
-        ];
-        $scope.projectimages.Project3 = [
-            'img/project/01.jpg',
-            'img/project/02.jpg',
-            'img/project/03.jpg',
-            'img/project/04.jpg',
-            'img/project/05.jpg',
-            'img/project/mc1.jpg'
-        ];
-        $scope.projectimages.Project4 = [
-            'img/project/d1.jpg',
-            'img/project/d2.jpg',
-            'img/project/d3.jpg',
-            'img/project/d4.jpg',
-            'img/project/d5.jpg',
-            'img/project/d6.jpg'
-        ];
-        $scope.projectimages.Project5 = [
-            'img/project/c1.jpg',
-            'img/project/c2.jpg',
-            'img/project/c3.jpg',
-            'img/project/c4.jpg',
-            'img/project/c5.jpg',
-            'img/project/c6.jpg'
-        ];
-        //     $scope.projectimages.Project6 = [
-        //   'img/project/c1.jpg',
-        //   'img/project/c2.jpg',
-        //   'img/project/c3.jpg',
-        //   'img/project/c4.jpg',
-        //   'img/project/c5.jpg',
-        //   'img/project/c6.jpg'
-        // ];
-        $scope.projectall = [{
-                id: 1,
-                img: "img/slider/sc0.jpg",
-                image: "img/background/mc1.jpg",
-                mimage: "img/mobile/c1.jpg",
-                name: "MUTTHA CHAMBERS I"
-            }, {
-                id: 2,
-                img: "img/slider/sc1.jpg",
-                image: "img/background/mc2.jpg",
-                mimage: "img/mobile/c2.jpg",
-                name: "MUTTHA CHAMBERS II"
-            }, {
-                id: 3,
-                img: "img/slider/sc2.jpg",
-                image: "img/background/mc1.jpg",
-                mimage: "",
-                name: "YOO GOA"
-            }, {
-                id: 4,
-                img: "img/slider/sc3.jpg",
-                image: "img/background/mt.jpg",
-                mimage: "img/mobile/towers.jpg",
-                name: "MUTTHA TOWERS"
-            }, {
-                id: 5,
-                img: "img/slider/sc4.jpg",
-                image: "img/background/ms.jpg",
-                mimage: "img/mobile/symphony.jpg",
-                name: "MUTTHA SYMPHONY"
-            },
-            //  {
-            //   id: 6,
-            //   img: "img/slider/sc4.jpg",
-            //   image: "img/background/ms.jpg",
-            //   name: "MUTTHA BUSINESS CENTER"
-            // }
-        ];
-        $scope.mySlides = [{
-            s: "img/buisness/enterance.jpg"
-        }];
-
-        _.each($scope.projectall, function (n) {
-            if (n.id == $stateParams.id) {
-                $scope.projectDetail = n;
-                $scope.Project = $scope.projectimages['Project' + $scope.projectDetail.id];
-            }
-        });
 
     })
-
-    //   .controller('ProjectsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-    //   //Used to name the .html file
-    //   $scope.template = TemplateService.changecontent("projects");
-    //   $scope.menutitle = NavigationService.makeactive("Project");
-    //   TemplateService.title = $scope.menutitle;
-    //   $scope.navigation = NavigationService.getnav();
-    // })
 
     .controller('KnowCtrl', function ($scope, $timeout, TemplateService, NavigationService, ContentService) {
         //Used to name the .html file
