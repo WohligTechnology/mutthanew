@@ -59,7 +59,7 @@ myApp.controller('HomeCtrl', function ($scope, $timeout, TemplateService, Naviga
 
         $scope.contactsubmit = function (formData) {
             console.log("hi contact");
-            NavigationService.ContactSave(formData, function (data) {
+            ContentService.ContactSave(formData, function (data) {
                 console.log("m in give", data);
                 if (data) {
                     $scope.thanks();
