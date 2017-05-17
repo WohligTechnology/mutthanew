@@ -65,6 +65,23 @@ myApp.factory("ContentService", function ($http) {
                 data: page,
                 withCredentials: false
             }).then(callback);
+        },
+
+        subscribeSave: function (subscriber, callback) {
+            $http({
+                url: adminurl + 'Subscribe/subscribeUser',
+                method: 'POST',
+                data: subscriber,
+                withCredentials: false
+            }).then(callback);
+        },
+
+        getFooterInfo: function (callback) {
+            $http({
+                url: adminurl + 'Know/getFooterInfo',
+                method: 'POST',
+                withCredentials: false
+            }).then(callback);
         }
     }
 })

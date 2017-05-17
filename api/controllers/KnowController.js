@@ -1,5 +1,9 @@
 module.exports = _.cloneDeep(require("sails-wohlig-controller"));
 var controller = {
+    getFooterInfo: function (req, res) {
+        Know.getFooterInfo(res.callback);
+    },
+
     getOne: function (req, res) {
         if (req.body)
             Know.getOne(req.body, res.callback);

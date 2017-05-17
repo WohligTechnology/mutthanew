@@ -200,7 +200,6 @@ myApp.controller('HomeCtrl', function ($scope, $timeout, TemplateService, Naviga
 
 
     })
-
     .controller('ContactCtrl', function ($scope, $state, $timeout, $uibModal, TemplateService, NavigationService, ContentService) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("contact");
@@ -398,7 +397,7 @@ myApp.controller('HomeCtrl', function ($scope, $timeout, TemplateService, Naviga
 
     })
 
-    .controller('footerctrl', function ($scope, $state, TemplateService, NavigationService, $timeout) {
+    .controller('footerctrl', function ($scope, $state, $timeout, TemplateService, NavigationService, ContentService) {
         $scope.template = TemplateService;
 
         //  $scope.modl=function(){
@@ -407,9 +406,14 @@ myApp.controller('HomeCtrl', function ($scope, $timeout, TemplateService, Naviga
         $scope.validEmail = /^[a-z]+[@][a-z]+[.]+[a-z]*$/;
         $scope.formData = {};
 
+        ContentService.getFooterInfo(function (data) {
+            console.log(data);
+            $scope.footer = data.data.data;
+        });
+
         $scope.contactsubmit = function (formData) {
             console.log("hi contact");
-            NavigationService.ContactSave(formData, function (data) {
+            ContentService.subscribeSave(formData, function (data) {
                 console.log("m in give", data);
                 if (data) {
                     $scope.show = true;

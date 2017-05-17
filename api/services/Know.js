@@ -40,6 +40,41 @@ module.exports = mongoose.model('Know', schema);
 
 var exports = _.cloneDeep(require("sails-wohlig-service")(schema));
 var model = {
+    getFooterInfo: function (callback) {
+        Know.findOne({}, {
+            'overview': 1
+        }).exec(function (err, know) {
+            if (err) {
+                callback(err, null);
+            } else if (know) {
+                Project.find({}, {
+                    'projectname': 1
+                }).exec(function (err, projects) {
+                    var data = {};
+                    if (err) {
+                        callback(err, null);
+                    } else if (projects) {
+                        data.know = know;
+                        data.projects = projects;
+                        callback(null, data);
+                    } else {
+                        callback({
+                            message: {
+                                data: "Data not found"
+                            }
+                        }, null);
+                    }
+                })
+            } else {
+                callback({
+                    message: {
+                        data: "Data not found"
+                    }
+                }, null);
+            }
+        });
+    },
+
     getAll: function (callback) {
         Know.find({}).exec(function (err, found) {
             if (err) {

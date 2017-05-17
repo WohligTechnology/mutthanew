@@ -1,27 +1,27 @@
 <footer class="footer-white" ng-controller="footerctrl">
-    <div class="container">
-      <div class="foot-space">
-   <div class="rows">
+  <div class="container">
+    <div class="foot-space">
+      <div class="rows">
         <div class="cols1">
-<ul class="padding0 squeeze">
-                  <li class="text-uppercase">
-                    <a href="#/know">know </a>
-                  </li>
-                 <p class="text-justify f10">Established in 1996, the Muttha Group has significantly contributed to the architecture of Pune. From the very first foundation stone that was laid the group has incorporated sound and innovative design concepts, involved some of the world's best architects and designers, used state-of-the-art infrastructure to make sure that the projects are nothing short of perfection.</p>
-                </ul>
+          <ul class="padding0 squeeze">
+            <li class="text-uppercase">
+              <a href="#/know">know </a>
+            </li>
+            <p class="text-justify f10">{{footer.know.overview}}</p>
+          </ul>
         </div>
-           <div class="cols1">
- <ul >
-                  <li class="text-uppercase" >
-                    <a href="#/build">build </a>
-                  </li>
-                  <li class="f10" ng-repeat="data in pages">
-                    <a ui-sref="{{data.link}}">{{data.name}}</a>
-                  </li>
-                   <!--<li class="f10" >
+        <div class="cols1">
+          <ul>
+            <li class="text-uppercase">
+              <a href="#/build">build </a>
+            </li>
+            <li class="f10" ng-repeat="project in footer.projects">
+              <a ui-sref="{{id:project._id}}">{{project.projectname}}</a>
+            </li>
+            <!--<li class="f10" >
                     <a href="#/projects/6">Muttha Business Center</a>
                   </li>-->
-                  <!--<li class="f10">
+            <!--<li class="f10">
                     <a >
 Chambers II</a>
                   </li>
@@ -40,64 +40,64 @@ Chambers II</a>
                    Symphony
                     </a>
                   </li>-->
-                </ul>
+          </ul>
         </div>
         <div class="cols1">
-<ul class="padding0">
-                  <li class="text-uppercase">
-                    <a href="#/give">give</a>
-                  </li>
-                  <li class="f10">
-                    <a href="#/give/shantilal">Shantilal Muthha Foundation</a>
-                  </li>
-                  <li class="f10">
-                    <a href="#/give/bjs">Bharatiya Jain Sanghatana</a>
-                  </li>
-                </ul>
+          <ul class="padding0">
+            <li class="text-uppercase">
+              <a href="#/give">give</a>
+            </li>
+            <li class="f10">
+              <a href="#/give/shantilal">Shantilal Muthha Foundation</a>
+            </li>
+            <li class="f10">
+              <a href="#/give/bjs">Bharatiya Jain Sanghatana</a>
+            </li>
+          </ul>
         </div>
 
         <div class="cols1">
-<ul>
-                  <!-- <li class="text-uppercase">
+          <ul>
+            <!-- <li class="text-uppercase">
                     <a href="#/media">media </a>
                   </li> -->
-                  <li class="text-uppercase">
-                    <a href="#/client">Clients</a>
-                  </li>
-                  <li class="text-uppercase">
-                    <a href="#/careers">Careers</a>
-                  </li>
-                  <li class="text-uppercase">
-                    <a href="#/contact">
+            <li class="text-uppercase">
+              <a href="#/client">Clients</a>
+            </li>
+            <li class="text-uppercase">
+              <a href="#/careers">Careers</a>
+            </li>
+            <li class="text-uppercase">
+              <a href="#/contact">
                       Contact Us
                     </a>
-                  </li>
-                </ul>
+            </li>
+          </ul>
         </div>
-           <div class="cols1">
-  <div class="list mt10">
-                            <p class=" text-uppercase">SUBSCRIBE TO NEWSLETTER</p>
-                            <form action="" class="" ng-if="!show">
-                                <input type="email" class="form-control custom-place" name="Email" ng-model="formData.email" placeholder="Enter Email Address">
-                                 <div class="clearfix">
-   <p class=" text-uppercase list pointer" ng-click="contactsubmit(formData)" >Subscribe</p>
-                                 </div>
-                              
-                                <!--<button class="btn"><img src="img/arrow.png" class="img-responsive" alt=""></i>-->
-                            <!--</button>-->
-                     
-                           
-                        </form>
-                               <div class="thanku"  ng-if="show">
- <p class="text-center">Thank you for subscribing!</p>
-                            </div>
-                    </div>
-        </div>
-      </div>
-      </div>
+        <div class="cols1">
+          <div class="list mt10">
+            <p class=" text-uppercase">SUBSCRIBE TO NEWSLETTER</p>
+            <form action="" class="" ng-if="!show">
+              <input type="email" class="form-control custom-place" name="Email" ng-model="formData.email" placeholder="Enter Email Address">
+              <div class="clearfix">
+                <button class=" text-uppercase list pointer" ng-click="contactsubmit(formData)">Subscribe</button>
+              </div>
+
+              <!--<button class="btn"><img src="img/arrow.png" class="img-responsive" alt=""></i>-->
+              <!--</button>-->
 
 
-      <!--<div class="row">
+            </form>
+            <div class="thanku" ng-if="show">
+              <p class="text-center">Thank you for subscribing!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--<div class="row">
         <div class="col-md-6">
           <div class="row">
             <div class="col-md-6">
@@ -167,7 +167,7 @@ Chambers II</a>
 </div>
         </div>
       </div>-->
-        <!--<div class="row pos-rel">
+    <!--<div class="row pos-rel">
           <div class="col-md-3">
           <div class="main-g">
               <span class="color-white">Copyright © 2016 Muttha </span>
@@ -215,18 +215,18 @@ Chambers II</a>
             </div>
             </div>
         </div>-->
-    </div>
-    <div class="foot-bottom">
-  <div class="container">
+  </div>
+  <div class="foot-bottom">
+    <div class="container">
       <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-6">
           <p class="text-left">© Copyright Muttha Group {{template.year}}</p>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-6">
-<p class="text-right">Designed by <a href="http://www.ting.in/" target="_blank">TING</a></p>
+          <p class="text-right">Designed by <a href="http://www.ting.in/" target="_blank">TING</a></p>
         </div>
       </div>
     </div>
-    </div>
+  </div>
 
 </footer>

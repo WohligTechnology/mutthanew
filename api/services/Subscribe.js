@@ -10,7 +10,7 @@ var schema = new Schema({
     },
     status: {
         type: String,
-        status: "Enabled"
+        default: "Enabled"
     }
 });
 
